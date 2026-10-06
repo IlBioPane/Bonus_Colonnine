@@ -6,9 +6,9 @@ Dashboard non ufficiale sul **bonus colonnine domestiche** (contributo MIMIT ges
 
 ## Link
 
-- **Pagina online:** https://ilbiopane.github.io/Bonus-Colonnine/
-- **Dashboard:** https://ilbiopane.github.io/Bonus-Colonnine/condividi/Bonus%20Colonnine%202026.html
-- **Scarica il file HTML:** pulsante "Scarica il file HTML" nella pagina online, oppure https://github.com/IlBioPane/Bonus-Colonnine/raw/main/condividi/Bonus%20Colonnine%202026.html
+- **Pagina online:** https://ilbiopane.github.io/Bonus_Colonnine/
+- **Dashboard:** https://ilbiopane.github.io/Bonus_Colonnine/condividi/Bonus%20Colonnine%202026.html
+- **Scarica il file HTML:** pulsante "Scarica il file HTML" nella pagina online, oppure https://github.com/IlBioPane/Bonus_Colonnine/raw/main/condividi/Bonus%20Colonnine%202026.html
 
 
 ## Cosa contiene la pagina
