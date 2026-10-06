@@ -4,6 +4,13 @@ Dashboard non ufficiale sul **bonus colonnine domestiche** (contributo MIMIT ges
 
 © IlBioPane. Tutti i diritti riservati.
 
+## Link
+
+- **Pagina online:** https://ilbiopane.github.io/Bonus-Colonnine/
+- **Dashboard:** https://ilbiopane.github.io/Bonus-Colonnine/condividi/Bonus%20Colonnine%202026.html
+- **Scarica il file HTML:** pulsante "Scarica il file HTML" nella pagina online, oppure https://github.com/IlBioPane/Bonus-Colonnine/raw/main/condividi/Bonus%20Colonnine%202026.html
+
+
 ## Cosa contiene la pagina
 
 - **Fondi residui in tempo reale.** Il residuo dello sportello 2026 (dotazione netta 14.475.000 €) è il dato ufficiale pubblicato da Invitalia. La pagina lo rilegge all'apertura e poi ogni 10 minuti. Se il collegamento non riesce mostra l'ultima istantanea inclusa nel file, con data e ora.
@@ -22,6 +29,7 @@ Grafica: tema scuro "Electric Trust" dall'export Stitch *Dashboard UI Redesign* 
 
 | Percorso | Contenuto |
 |---|---|
+| `index.html` | Pagina di benvenuto per GitHub Pages, con i link per aprire e scaricare la dashboard. |
 | `condividi/Bonus Colonnine 2026.html` | **File da condividere.** Codice offuscato, dati codificati, si aggiorna in tempo reale quando viene aperto. |
 | `dashboard.html` | Versione per gli Artifact di claude.ai: solo istantanea, senza codice di collegamento. |
 | `dev/Bonus Colonnine 2026 (sviluppo).html` | Versione leggibile per le prove. **Non va condivisa.** |
