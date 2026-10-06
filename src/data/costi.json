@@ -1,1 +1,296 @@
-{"iva_ammissibile": true, "nota_iva": "Bozza.", "voci": {"wb_3_7": {"voce": "Wallbox 3,7 kW", "min": 350, "tipico": 450, "max": 700, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0}, "wb_3_7_smart": {"voce": "Wallbox 3,7 kW smart", "min": 450, "tipico": 600, "max": 900, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0}, "wb_7_4": {"voce": "Wallbox 7,4 kW", "min": 450, "tipico": 600, "max": 900, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0}, "wb_7_4_smart": {"voce": "Wallbox 7,4 kW smart", "min": 600, "tipico": 800, "max": 1200, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0}, "wb_11": {"voce": "Wallbox 11 kW", "min": 650, "tipico": 900, "max": 1400, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0}, "wb_22": {"voce": "Wallbox 22 kW", "min": 800, "tipico": 1100, "max": 1700, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0}, "dlm_sensore": {"voce": "Sensore gestione dinamica", "min": 60, "tipico": 120, "max": 200, "lav": 40, "iva": 0.22, "ammissibile": true, "cassa": 0}, "protezioni_mono": {"voce": "Protezioni dedicate", "min": 150, "tipico": 250, "max": 400, "lav": 60, "iva": 0.22, "ammissibile": true, "cassa": 0}, "protezioni_tri": {"voce": "Protezioni trifase", "min": 250, "tipico": 400, "max": 650, "lav": 80, "iva": 0.22, "ammissibile": true, "cassa": 0}, "spd": {"voce": "SPD", "min": 80, "tipico": 120, "max": 200, "lav": 30, "iva": 0.22, "ammissibile": true, "cassa": 0}, "linea_vista_mono": {"voce": "Linea a vista", "min": 10, "tipico": 15, "max": 22, "lav": 8, "iva": 0.22, "ammissibile": true, "cassa": 0}, "linea_traccia_mono": {"voce": "Linea sottotraccia", "min": 18, "tipico": 28, "max": 40, "lav": 18, "iva": 0.22, "ammissibile": true, "cassa": 0}, "linea_interrata_mono": {"voce": "Linea interrata", "min": 35, "tipico": 55, "max": 85, "lav": 35, "iva": 0.22, "ammissibile": true, "cassa": 0}, "linea_vista_tri": {"voce": "Linea a vista tri", "min": 14, "tipico": 20, "max": 30, "lav": 9, "iva": 0.22, "ammissibile": true, "cassa": 0}, "linea_traccia_tri": {"voce": "Linea sottotraccia tri", "min": 24, "tipico": 35, "max": 50, "lav": 20, "iva": 0.22, "ammissibile": true, "cassa": 0}, "linea_interrata_tri": {"voce": "Linea interrata tri", "min": 42, "tipico": 65, "max": 95, "lav": 38, "iva": 0.22, "ammissibile": true, "cassa": 0}, "posa_wallbox": {"voce": "Posa e collegamento", "min": 150, "tipico": 250, "max": 400, "lav": 230, "iva": 0.22, "ammissibile": true, "cassa": 0}, "attraversamenti": {"voce": "Attraversamenti", "min": 50, "tipico": 100, "max": 200, "lav": 80, "iva": 0.22, "ammissibile": true, "cassa": 0}, "quadro_dedicato": {"voce": "Quadro dedicato", "min": 500, "tipico": 900, "max": 1500, "lav": 400, "iva": 0.22, "ammissibile": true, "cassa": 0}, "progetto_singolo": {"voce": "Progetto professionista", "min": 250, "tipico": 400, "max": 700, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0.04}, "progetto_cond": {"voce": "Progetto condominio", "min": 800, "tipico": 1500, "max": 2500, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0.04}, "vvf_misure": {"voce": "Misure antincendio", "min": 250, "tipico": 450, "max": 900, "lav": 200, "iva": 0.22, "ammissibile": true, "cassa": 0}, "pratica_vvf_a": {"voce": "Pratica VVF cat A", "min": 800, "tipico": 1200, "max": 2000, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0.04}, "pratica_vvf_bc": {"voce": "Pratica VVF cat B/C", "min": 1500, "tipico": 2500, "max": 4000, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0.04}, "diritti_vvf_a": {"voce": "Diritti VVF", "min": 150, "tipico": 300, "max": 450, "lav": 0, "iva": 0, "ammissibile": false, "cassa": 0}, "diritti_vvf_bc": {"voce": "Diritti VVF", "min": 400, "tipico": 700, "max": 1200, "lav": 0, "iva": 0, "ammissibile": false, "cassa": 0}, "nuovo_pod": {"voce": "Nuovo POD", "min": 250, "tipico": 400, "max": 800, "lav": 0, "iva": 0.1, "ammissibile": true, "cassa": 0}, "aumento_potenza": {"voce": "Aumento potenza (per kW)", "min": 60, "tipico": 72, "max": 80, "lav": 0, "iva": 0.1, "ammissibile": false, "cassa": 0}, "pratica_soprintendenza": {"voce": "Pratica Soprintendenza", "min": 300, "tipico": 600, "max": 1200, "lav": 0, "iva": 0.22, "ammissibile": true, "cassa": 0.04}}}
+{
+ "iva_ammissibile": false,
+ "nota_iva": "Il contributo è calcolato sull'imponibile, IVA esclusa: le fonti indicano che imposte e tasse non sono spese ammesse, quindi l'IVA resta a tuo carico. Imponibile e IVA sono indicati separatamente per ogni voce. Allaccio e aumento di potenza hanno IVA al 10% per le utenze domestiche, i diritti VVF non hanno IVA. Le parcelle dei professionisti comprendono il contributo previdenziale del 4%. Prezzi indicativi di mercato 2026: non sostituiscono un preventivo.",
+ "voci": {
+  "wb_3_7": {
+   "voce": "Wallbox 3,7 kW (modo 3)",
+   "min": 350,
+   "tipico": 450,
+   "max": 700,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "wb_3_7_smart": {
+   "voce": "Wallbox 3,7 kW con gestione dinamica",
+   "min": 450,
+   "tipico": 600,
+   "max": 900,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "wb_7_4": {
+   "voce": "Wallbox 7,4 kW (modo 3)",
+   "min": 450,
+   "tipico": 600,
+   "max": 900,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "wb_7_4_smart": {
+   "voce": "Wallbox 7,4 kW con gestione dinamica",
+   "min": 600,
+   "tipico": 800,
+   "max": 1200,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "wb_11": {
+   "voce": "Wallbox 11 kW trifase",
+   "min": 650,
+   "tipico": 900,
+   "max": 1400,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "wb_22": {
+   "voce": "Wallbox 22 kW trifase",
+   "min": 800,
+   "tipico": 1100,
+   "max": 1700,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "dlm_sensore": {
+   "voce": "Sensore di gestione dinamica della potenza",
+   "min": 60,
+   "tipico": 120,
+   "max": 200,
+   "lav": 40,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "protezioni_mono": {
+   "voce": "Protezioni dedicate (magnetotermico e differenziale tipo A + 6 mA DC)",
+   "min": 150,
+   "tipico": 250,
+   "max": 400,
+   "lav": 60,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "protezioni_tri": {
+   "voce": "Protezioni dedicate trifase (differenziale tipo B o A + 6 mA DC)",
+   "min": 250,
+   "tipico": 400,
+   "max": 650,
+   "lav": 80,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "spd": {
+   "voce": "Scaricatore di sovratensione (SPD)",
+   "min": 80,
+   "tipico": 120,
+   "max": 200,
+   "lav": 30,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "linea_vista_mono": {
+   "voce": "Linea dedicata a vista (al metro)",
+   "min": 10,
+   "tipico": 15,
+   "max": 22,
+   "lav": 8,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "linea_traccia_mono": {
+   "voce": "Linea dedicata sottotraccia (al metro)",
+   "min": 18,
+   "tipico": 28,
+   "max": 40,
+   "lav": 18,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "linea_interrata_mono": {
+   "voce": "Linea dedicata interrata (al metro)",
+   "min": 35,
+   "tipico": 55,
+   "max": 85,
+   "lav": 35,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "linea_vista_tri": {
+   "voce": "Linea trifase a vista (al metro)",
+   "min": 14,
+   "tipico": 20,
+   "max": 30,
+   "lav": 9,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "linea_traccia_tri": {
+   "voce": "Linea trifase sottotraccia (al metro)",
+   "min": 24,
+   "tipico": 35,
+   "max": 50,
+   "lav": 20,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "linea_interrata_tri": {
+   "voce": "Linea trifase interrata (al metro)",
+   "min": 42,
+   "tipico": 65,
+   "max": 95,
+   "lav": 38,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "posa_wallbox": {
+   "voce": "Posa, collegamento e collaudo della wallbox",
+   "min": 150,
+   "tipico": 250,
+   "max": 400,
+   "lav": 230,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "attraversamenti": {
+   "voce": "Forature, attraversamenti e ripristini",
+   "min": 50,
+   "tipico": 100,
+   "max": 200,
+   "lav": 80,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "quadro_dedicato": {
+   "voce": "Quadro elettrico dedicato ai punti di ricarica",
+   "min": 500,
+   "tipico": 900,
+   "max": 1500,
+   "lav": 400,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "progetto_singolo": {
+   "voce": "Progetto dell'impianto (professionista)",
+   "min": 250,
+   "tipico": 400,
+   "max": 700,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0.04
+  },
+  "progetto_cond": {
+   "voce": "Progetto e direzione lavori (professionista)",
+   "min": 800,
+   "tipico": 1500,
+   "max": 2500,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0.04
+  },
+  "vvf_misure": {
+   "voce": "Sgancio d'emergenza, segnaletica e protezioni antiurto",
+   "min": 250,
+   "tipico": 450,
+   "max": 900,
+   "lav": 200,
+   "iva": 0.22,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "pratica_vvf_a": {
+   "voce": "Valutazione e attestazione antincendio (tecnico, cat. A)",
+   "min": 600,
+   "tipico": 900,
+   "max": 1500,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": false,
+   "cassa": 0.04
+  },
+  "pratica_vvf_bc": {
+   "voce": "Valutazione antincendio e pratica VVF (tecnico, cat. B/C)",
+   "min": 1200,
+   "tipico": 2000,
+   "max": 3500,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": false,
+   "cassa": 0.04
+  },
+  "diritti_vvf_a": {
+   "voce": "Eventuali diritti dei Vigili del Fuoco",
+   "min": 0,
+   "tipico": 0,
+   "max": 300,
+   "lav": 0,
+   "iva": 0,
+   "ammissibile": false,
+   "cassa": 0
+  },
+  "diritti_vvf_bc": {
+   "voce": "Diritti VVF per valutazione progetto e SCIA",
+   "min": 300,
+   "tipico": 600,
+   "max": 1000,
+   "lav": 0,
+   "iva": 0,
+   "ammissibile": false,
+   "cassa": 0
+  },
+  "nuovo_pod": {
+   "voce": "Allaccio nuovo POD (contributi ARERA)",
+   "min": 250,
+   "tipico": 400,
+   "max": 800,
+   "lav": 0,
+   "iva": 0.1,
+   "ammissibile": true,
+   "cassa": 0
+  },
+  "aumento_potenza": {
+   "voce": "Aumento di potenza (al kW, contributi ARERA)",
+   "min": 60,
+   "tipico": 72,
+   "max": 80,
+   "lav": 0,
+   "iva": 0.1,
+   "ammissibile": false,
+   "cassa": 0
+  },
+  "pratica_soprintendenza": {
+   "voce": "Pratica per la Soprintendenza (tecnico)",
+   "min": 300,
+   "tipico": 600,
+   "max": 1200,
+   "lav": 0,
+   "iva": 0.22,
+   "ammissibile": false,
+   "cassa": 0.04
+  }
+ }
+}

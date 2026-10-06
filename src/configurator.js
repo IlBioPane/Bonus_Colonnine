@@ -187,7 +187,7 @@ function quote(s, ev, coeff) {
   if (ev.soggetta === true) {
     line("vvf_misure", null, 1);
     line(s.rimessa === "a" ? "pratica_vvf_a" : "pratica_vvf_bc", null, 1);
-    line(s.rimessa === "a" ? "diritti_vvf_a" : "diritti_vvf_bc", null, 1);
+    if (s.rimessa !== "a") line("diritti_vvf_bc", null, 1);
   }
   if (s.alim === "nuovo_pod") line("nuovo_pod", `Nuovo POD da ${nf1.format(ev.pot).replace(",0", "")} kW`, 1, { nota: "" });
   else if (s.alim === "contatore_casa" && ev.pot > s.pot) line("aumento_potenza", `Aumento di potenza (+${nf1.format(ev.pot - s.pot).replace(",0", "")} kW)`, ev.pot - s.pot);
@@ -221,7 +221,7 @@ function renderOut() {
     [ev.progProf ? "warn" : "good", ev.progProf ? "Progetto di un professionista" : "Progetto dell'installatore"]
   ];
   const ob = ev.ob.map((o) => `<li><span class="mk ${LV[o.lvl][1]}" aria-label="${LV[o.lvl][2]}">${LV[o.lvl][0]}</span><div><b>${esc(o.t)}</b>${o.d}${o.r && o.r.length ? `<span class="ref">${o.r.map(refLink).join(" · ")}</span>` : ""}</div></li>`).join("");
-  const rows = q.L.map((l) => `<tr><td>${esc(l.label)}${l.eleg ? "" : '<span class="tag-no">non coperta dal bonus</span>'}${l.q > 1 && !/\(\d+ m\)/.test(l.label) ? ` <span class="muted small">× ${nf0.format(l.q)}</span>` : ""}</td><td class="n">${eur(l.typImp)}</td><td class="n">${l.iva ? nf0.format(l.iva * 100) + "%" : "esente"}<br><span class="range">${eur(l.typIva)}</span></td><td class="n">${eur(l.typTot)}</td></tr>`).join("");
+  const rows = q.L.map((l) => `<tr><td>${esc(l.label)}${l.eleg ? "" : '<span class="tag-no">non coperta dal bonus</span>'}${l.q > 1 && Number.isInteger(l.q) && !/\(\d+ m\)|kW\)/.test(l.label) ? ` <span class="muted small">× ${nf0.format(l.q)}</span>` : ""}</td><td class="n">${eur(l.typImp)}</td><td class="n">${l.iva ? nf0.format(l.iva * 100) + "%" : "fuori campo"}<br><span class="range">${eur(l.typIva)}</span></td><td class="n">${eur(l.typTot)}</td></tr>`).join("");
   const t = q.t;
   $("cfgOut").innerHTML = `
     <div class="verdict">${pills.map(([k, x]) => `<span class="pill ${k}">${esc(x)}</span>`).join("")}</div>

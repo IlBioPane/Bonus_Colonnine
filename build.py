@@ -9,7 +9,7 @@ import base64, json, os, subprocess, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
-OBF = os.environ.get("BP_OBF_DIR", "/tmp/bonus-colonnine-obf")
+OBF = os.environ.get("BP_OBF_DIR", os.path.join(ROOT, ".obf"))
 KEY = b"BioPane\xb7BonusColonnine2026"
 
 def rd(p): return open(os.path.join(SRC, p), encoding="utf-8").read()
@@ -33,7 +33,14 @@ def bundle(live):
     parts += [rd("core.js"), rd("configurator.js")]
     return '(() => {\n"use strict";\n' + "\n".join(parts) + "\n})();\n"
 
+def ensure_obfuscator():
+    """Installa javascript-obfuscator nella cartella .obf (ignorata da git) se manca."""
+    if os.path.exists(os.path.join(OBF, "node_modules/.bin/javascript-obfuscator")): return
+    os.makedirs(OBF, exist_ok=True)
+    subprocess.run(["npm", "install", "--prefix", OBF, "--no-audit", "--no-fund", "javascript-obfuscator@4"], check=True)
+
 def obfuscate(code, hard=False):
+    ensure_obfuscator()
     tmp_in = os.path.join(OBF, "in.js"); tmp_out = os.path.join(OBF, "out.js")
     open(tmp_in, "w", encoding="utf-8").write(code)
     cmd = [os.path.join(OBF, "node_modules/.bin/javascript-obfuscator"), tmp_in, "--output", tmp_out,
