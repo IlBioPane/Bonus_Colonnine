@@ -7,7 +7,7 @@ function paintWatermark() {
   const layer = _g("wmLayer"); if (!layer) return;
   const ink = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#10202B";
   const dark = matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light" || document.documentElement.dataset.theme === "dark";
-  const op = dark ? 0.07 : 0.055;
+  const op = dark ? 0.06 : 0.06;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="340" height="220"><g transform="rotate(-28 170 110)" fill="${ink}" fill-opacity="${op}" font-family="Titillium Web, Segoe UI, sans-serif" font-weight="700"><text x="40" y="100" font-size="30" letter-spacing="2">${AUTHOR}</text><text x="44" y="126" font-size="12" letter-spacing="1.5">BONUS COLONNINE 2026 · ©</text></g></svg>`;
   layer.style.backgroundImage = `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}")`;
 }

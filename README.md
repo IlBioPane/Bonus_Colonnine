@@ -13,7 +13,10 @@ Dashboard non ufficiale sul **bonus colonnine domestiche** (contributo MIMIT ges
   - documenti da caricare nella domanda e da conservare;
   - **preventivo di massima IVA inclusa**, con imponibile e IVA separati per ogni voce, il contributo stimato (80% dell'imponibile ammissibile, entro 1.500 € o 8.000 €) e la spesa a carico;
   - l'elenco di tutte le casistiche (68 combinazioni), filtrabile.
+- **Verifica della colonnina.** Ricerca per marca, modello o codice negli elenchi GSE dei dispositivi idonei (GDC e NO GDC), requisito obbligatorio del bonus. La sezione compare quando gli elenchi ufficiali sono stati importati (vedi sotto).
 - **Guida, documenti, erogazione, normativa e prospettive 2027–2030.**
+
+Grafica: tema scuro "Electric Trust" dal progetto Stitch *Dashboard UI Redesign* (Space Grotesk, Geist, JetBrains Mono, superfici in vetro, accento ciano `#00D2FF`).
 
 ## Struttura del repository
 
@@ -29,6 +32,8 @@ Dashboard non ufficiale sul **bonus colonnine domestiche** (contributo MIMIT ges
 | `src/protect.js` | Filigrana e firma IlBioPane, deterrenti alla copia, controllo d'integrità della firma. |
 | `src/data/*.json` | Istantanea, storico degli sportelli, regole, costi e coefficienti provinciali. |
 | `tools/genera_dati_configuratore.py` | Fonte leggibile di testi normativi, riferimenti, voci di costo e coefficienti delle 107 province: rigenera `cfg.json`, `costi.json` e `province.json`. |
+| `src/colonnine.js` | Ricerca negli elenchi GSE dei dispositivi idonei. |
+| `tools/importa_elenchi_gse.py` | Importa gli elenchi GSE ufficiali (Excel, PDF o CSV) in `src/data/gse.json`. |
 | `aggiorna_dati.py` | Aggiorna l'istantanea dal dato ufficiale e rigenera le pagine. |
 | `build.py` | Assembla, codifica e offusca le tre versioni. |
 
@@ -44,6 +49,18 @@ python3 build.py
 ```
 
 Prima di salvare, `build.py` controlla che nei file da condividere non compaiano in chiaro riferimenti tecnici alla fonte. Se ne trova uno, si ferma con un errore.
+
+## Aggiornare gli elenchi GSE delle colonnine
+
+Scarica gli elenchi GDC e NO GDC dalla pagina [GSE · Documenti](https://www.gse.it/servizi-per-te/rinnovabili-per-i-trasporti/agevolazioni-per-la-ricarica-dei-veicoli-elettrici/documenti), poi:
+
+```bash
+pip install openpyxl pdfplumber
+python3 tools/importa_elenchi_gse.py --data 21/09/2026 "Elenco GDC.xlsx" "Elenco NO GDC.pdf"
+python3 build.py
+```
+
+Lo script riconosce le colonne dalle intestazioni e capisce dal nome del file se l'elenco è GDC o NO GDC (si può forzare con `GDC=file` o `NOGDC=file`).
 
 ## Come sono calcolati i preventivi
 

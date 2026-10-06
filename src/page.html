@@ -1,24 +1,20 @@
 <title>Bonus Colonnine 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Roboto+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <style>
 /* Layout: una colonna da "quadro elettrico" — banda di sintesi (indicatore di carica + KPI), poi previsione, storico, prospettive, guida, norme; indice di sezione fisso in alto. */
+/* Tema scuro "Electric Trust" (design system Stitch del progetto Dashboard UI Redesign) */
 :root{
-  --bg:#F2F5F7; --surface:#FFFFFF; --sunken:#E8EEF2; --ink:#10202B; --ink-2:#3C4F5C; --muted:#667985; --line:#D3DDE3;
-  --accent:#0074A6; --accent-soft:#D8ECF5; --accent-ink:#005A82;
-  --proj:#C46A00; --context:#9AA9B3;
-  --good:#1D7A4C; --good-soft:#DCEFE4; --warn:#9A5B00; --warn-soft:#FAEBD2; --crit:#B3261E; --crit-soft:#F7DEDC;
-  --f-ui:"Titillium Web","Segoe UI",system-ui,-apple-system,sans-serif;
-  --f-prose:"Lora",Georgia,"Times New Roman",serif;
-  --f-data:"Roboto Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-  --r:6px;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0C1419; --surface:#131E25; --sunken:#1A2730; --ink:#E3EBF0; --ink-2:#B3C2CB; --muted:#8395A1; --line:#25343E;
-  --accent:#2593C4; --accent-soft:#11303F; --accent-ink:#7CC6E8;
-  --proj:#CF7A12; --context:#5C6E79;
-  --good:#4CC38A; --good-soft:#12301F; --warn:#E5A646; --warn-soft:#352610; --crit:#F2766E; --crit-soft:#3B1816;
+  --bg:#0B131B; --surface:rgba(15,27,38,.72); --surface-solid:#0F1B26; --sunken:#142332; --ink:#F8FAFC; --ink-2:#BBC9CF; --muted:#94A3B8; --dim:#64748B; --line:#1E293B; --hair:rgba(255,255,255,.08);
+  --accent:#00D2FF; --accent-soft:rgba(0,210,255,.12); --accent-ink:#47D6FF;
+  --proj:#FBBF24; --context:#475569;
+  --good:#34D399; --good-soft:rgba(16,185,129,.14); --warn:#FBBF24; --warn-soft:rgba(251,191,36,.12); --crit:#FFB4AB; --crit-soft:rgba(255,99,88,.14);
+  --f-ui:"Geist","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-head:"Space Grotesk","Geist",system-ui,sans-serif;
+  --f-prose:"Geist","Segoe UI",system-ui,sans-serif;
+  --f-data:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --r:4px;
   color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0C1419; --surface:#131E25; --sunken:#1A2730; --ink:#E3EBF0; --ink-2:#B3C2CB; --muted:#8395A1; --line:#25343E;
@@ -233,6 +229,58 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 .lvl.chk{background:var(--warn-soft);color:var(--warn)}
 .lvl.ok{background:var(--good-soft);color:var(--good)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---- pelle Stitch: vetro, bagliori, tipografia tecnica ---- */
+body{background:radial-gradient(1200px 600px at 15% -5%,rgba(0,210,255,.07),transparent 60%),radial-gradient(900px 500px at 100% 20%,rgba(16,185,129,.05),transparent 60%),var(--bg);background-attachment:fixed;font-size:15px}
+h1,h2,h3,.answer .when{font-family:var(--f-head)}
+h2{font-weight:600;letter-spacing:-.02em}
+.eyebrow,.kpi dt,th,.gauge-scale,.cfg-form legend,.field label{font-family:var(--f-data);text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:500;color:var(--muted)}
+.eyebrow{color:var(--accent)}
+.cfg-form legend{color:var(--ink-2)}
+.field label{color:var(--ink-2)}
+.panel,.card,.out-card,.table-wrap{background:var(--surface);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--hair);border-radius:8px}
+.panel.hero{border-top:1px solid rgba(0,210,255,.3);box-shadow:0 12px 32px -4px rgba(0,210,255,.12)}
+.toc{background:rgba(11,19,27,.82);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--hair)}
+.toc a{font-family:var(--f-data);font-size:.78rem;font-weight:500;letter-spacing:.04em;color:var(--muted)}
+.toc a:hover{background:var(--accent-soft);color:var(--accent)}
+.top{border-bottom:1px solid var(--hair)}
+.brand h1{font-weight:700;letter-spacing:-.03em}
+.brand svg{color:var(--accent);filter:drop-shadow(0 0 8px rgba(0,210,255,.45))}
+.big{font-weight:600;color:var(--ink);text-shadow:0 0 24px rgba(0,210,255,.25)}
+.cells{border-color:var(--line)}
+.cell.on{background:var(--accent);box-shadow:0 0 8px rgba(0,210,255,.45)}
+.cap{background:var(--line)}
+.badge{font-family:var(--f-data);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
+.badge.live{background:rgba(16,185,129,.12);color:#34D399}
+.badge.live .dot{box-shadow:0 0 8px #10B981}
+.btn{font-family:var(--f-data);font-weight:600;background:var(--accent);color:#0B131B;border:0}
+.btn:hover{color:#0B131B;box-shadow:0 0 16px rgba(0,210,255,.45)}
+.seg button{background:transparent;border-color:var(--hair);color:var(--muted);font-family:var(--f-data);font-size:.78rem}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#0B131B;border-color:var(--accent)}
+.chips label{background:rgba(11,19,27,.6);border-color:var(--line);border-radius:4px}
+.chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--ink);box-shadow:0 0 8px rgba(0,210,255,.2)}
+.cfg-form select,.cfg-form input[type=number],.db-filters select,.search input{background:rgba(11,19,27,.8);border:1px solid var(--line);border-radius:4px;color:var(--ink)}
+.cfg-form select:focus,.cfg-form input:focus,.db-filters select:focus,.search input:focus{border-color:var(--accent);box-shadow:0 0 8px rgba(0,210,255,.25);outline:0}
+select option,select optgroup{background:#0F1B26;color:var(--ink)}
+th{background:rgba(20,35,50,.6)}
+.tip{background:rgba(20,35,50,.94);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);border:1px solid rgba(0,210,255,.3);box-shadow:0 12px 32px -4px rgba(0,210,255,.18)}
+.answer{background:var(--sunken);border:1px solid var(--hair)}
+.quote tr.tot td{border-top:1px solid rgba(0,210,255,.4)}
+.quote tr.net td{background:var(--accent-soft);color:var(--ink)}
+.steps li::before{box-shadow:0 0 10px rgba(0,210,255,.3)}
+.card .amount{color:var(--accent)}
+footer{border-top:1px solid var(--hair)}
+.chart .wm{fill:var(--accent);opacity:.14}
+.search{display:grid;gap:12px}
+.search input{font:inherit;font-size:1rem;padding:12px 14px;width:100%}
+.search .seg{margin:0}
+.gse-res{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+.gse-res li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center;padding:10px 12px;border:1px solid var(--hair);border-radius:4px;background:rgba(11,19,27,.5)}
+.gse-res b{color:var(--ink)}
+.gse-res .meta{grid-column:1/-1;font-size:.82rem;color:var(--muted);font-family:var(--f-data)}
+.gse-tag{font-family:var(--f-data);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:rgba(16,185,129,.12);color:#34D399;white-space:nowrap}
+.gse-tag.no{background:var(--accent-soft);color:var(--accent-ink)}
+mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
 </style>
 
 <div class="wrap">
@@ -261,6 +309,7 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
     <a href="#residuo">Residuo</a>
     <a href="#previsione">Previsione 2026</a>
     <a href="#configuratore">Il tuo caso</a>
+    <a href="#colonnine" id="tocColonnine" hidden>Verifica colonnina</a>
     <a href="#storico">Sportelli precedenti</a>
     <a href="#prospettive">Anni successivi</a>
     <a href="#guida">Come fare domanda</a>
@@ -361,6 +410,28 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
       <div class="db-filters" id="dbFilters"></div>
       <div class="table-wrap"><table class="db-table"><thead id="dbHead"></thead><tbody id="dbRows"></tbody></table></div>
     </details>
+  </section>
+
+  <!-- COLONNINE IDONEE -->
+  <section class="block" id="colonnine" hidden>
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Elenchi ufficiali GSE</p>
+        <h2>La tua colonnina rientra nel bonus?</h2>
+        <p>Il modello deve essere presente negli elenchi GSE dei dispositivi idonei, GDC o NO GDC, in vigore alla data della domanda. Cerca per marca, modello o codice prodotto.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <form class="search" id="gseForm" role="search" autocomplete="off">
+        <label class="sr" for="gseQ">Cerca la colonnina</label>
+        <input id="gseQ" type="search" placeholder="Es. Wallbox Pulsar Plus, Easee Charge, ABB Terra AC…" enterkeyhint="search">
+        <div class="seg" id="gseList" role="group" aria-label="Elenco">
+          <button type="button" data-l="" aria-pressed="true">Tutti</button><button type="button" data-l="GDC" aria-pressed="false">GDC</button><button type="button" data-l="NO GDC" aria-pressed="false">NO GDC</button>
+        </div>
+      </form>
+      <p class="small muted" id="gseMeta"></p>
+      <div id="gseOut" aria-live="polite"></div>
+    </div>
   </section>
 
   <!-- STORICO -->

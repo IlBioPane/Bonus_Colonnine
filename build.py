@@ -22,7 +22,8 @@ def pack(obj):
 
 def data_js():
     series = js("series.json"); series.pop("2026", None)
-    data = {"snapshot": js("snapshot.json"), "history": series, "cfg": js("cfg.json"), "costi": js("costi.json"), "province": js("province.json")}
+    data = {"snapshot": js("snapshot.json"), "history": series, "cfg": js("cfg.json"), "costi": js("costi.json"), "province": js("province.json"),
+            "gse": js("gse.json") if os.path.exists(os.path.join(SRC, "data", "gse.json")) else None}
     k = list(KEY)
     return ("function __bpU(s){const k=%s;const b=atob(s);const u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i)^k[i%%k.length];return JSON.parse(new TextDecoder().decode(u));}\n"
             "const BP_DATA=__bpU(\"%s\");\n") % (json.dumps(k), pack(data))
@@ -30,7 +31,7 @@ def data_js():
 def bundle(live):
     parts = [data_js(), rd("protect.js")]
     if live: parts.append(rd("live.js"))
-    parts += [rd("core.js"), rd("configurator.js")]
+    parts += [rd("core.js"), rd("configurator.js"), rd("colonnine.js")]
     return '(() => {\n"use strict";\n' + "\n".join(parts) + "\n})();\n"
 
 def ensure_obfuscator():
