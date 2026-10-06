@@ -2,7 +2,7 @@
 """Genera le due versioni della dashboard Bonus Colonnine 2026 (IlBioPane).
 
 - condividi/Bonus Colonnine 2026.html  file da condividere: si aggiorna in tempo reale, codice offuscato
-- dashboard.html                                 versione Artifact (istantanea, senza codice di collegamento)
+- dashboard.html                                 versione statica (istantanea, senza codice di collegamento)
 - dev/Bonus Colonnine 2026 (sviluppo).html        versione leggibile per le prove
 """
 import base64, json, os, subprocess, sys

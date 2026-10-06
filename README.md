@@ -31,7 +31,7 @@ Grafica: tema scuro "Electric Trust" dall'export Stitch *Dashboard UI Redesign* 
 |---|---|
 | `index.html` | Pagina di benvenuto per GitHub Pages, con i link per aprire e scaricare la dashboard. |
 | `condividi/Bonus Colonnine 2026.html` | **File da condividere.** Codice offuscato, dati codificati, si aggiorna in tempo reale quando viene aperto. |
-| `dashboard.html` | Versione per gli Artifact di claude.ai: solo istantanea, senza codice di collegamento. |
+| `dashboard.html` | Versione statica: solo istantanea dei dati, senza codice di collegamento. |
 | `dev/Bonus Colonnine 2026 (sviluppo).html` | Versione leggibile per le prove. **Non va condivisa.** |
 | `src/page.html` | Struttura, stili e testi della pagina. |
 | `src/core.js` | Indicatori, grafici e previsioni. |
