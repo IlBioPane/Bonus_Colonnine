@@ -77,4 +77,4 @@ Dashboard **non ufficiale**. Il dato dei fondi residui è quello ufficiale di In
 
 Tutti i diritti riservati © IlBioPane. Vietata la riproduzione, anche parziale, di testi, dati, codice ed elaborazioni senza autorizzazione dell'autore.
 
-Stato attuale: importato l'elenco **NO GDC** di ottobre 2026 (38 dispositivi, 15 costruttori). Manca l'elenco GDC: finché non viene importato, la ricerca avvisa che un modello assente potrebbe trovarsi nell'elenco GDC.
+Stato attuale: importati gli elenchi GSE di ottobre 2026, GDC (604 dispositivi, 93 costruttori) e NO GDC (38 dispositivi, 15 costruttori).

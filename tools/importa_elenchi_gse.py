@@ -76,17 +76,26 @@ def read_rows(path):
 
 def parse(path, kind):
     items = []
+    cols = width = None
+    last_brand = last_mod = ""
     for rows, brand in read_rows(path):
-        h, cols = find_header(rows)
-        if h is None: continue
-        last_marca = last_mod = ""
-        for r in rows[h + 1:]:
+        if not rows: continue
+        h, found = find_header(rows)
+        if h is not None:
+            cols, width, start = found, len(rows[h]), h + 1
+        elif cols and len(rows[0]) == width:
+            start = 0                                   # tabella che prosegue nella pagina dopo, senza intestazione
+        else:
+            continue                                    # es. riquadro "sito internet / riferimenti"
+        if brand != last_brand: last_mod = ""
+        last_brand = brand
+        for r in rows[start:]:
             get = lambda k: clean(r[cols[k]]) if k in cols and cols[k] < len(r) else ""
             nd = lambda x: "" if x in ("-", "–") else x
-            marca = get("marca") or last_marca or brand
+            marca = get("marca") or brand
             modello = get("modello") or last_mod                             # celle unite: il modello vale per le righe sotto
             if not modello or modello.lower() in KEYS["modello"] or not any(clean(c) for c in r): continue
-            last_marca, last_mod = marca, modello
+            last_mod = modello
             items.append([marca, modello, nd(get("versione")), get("potenza"), kind, get("alim"), nd(get("esterno"))])
     if not items:
         sys.exit("Nessuna riga riconosciuta in %s: controlla le intestazioni delle colonne" % path)
