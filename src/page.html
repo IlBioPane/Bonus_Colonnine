@@ -1,18 +1,18 @@
 <title>Bonus Colonnine 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
 <style>
 /* Layout: una colonna da "quadro elettrico" — banda di sintesi (indicatore di carica + KPI), poi previsione, storico, prospettive, guida, norme; indice di sezione fisso in alto. */
 /* Tema scuro "Electric Trust" (design system Stitch del progetto Dashboard UI Redesign) */
 :root{
-  --bg:#0B131B; --surface:rgba(15,27,38,.72); --surface-solid:#0F1B26; --sunken:#142332; --ink:#F8FAFC; --ink-2:#BBC9CF; --muted:#94A3B8; --dim:#64748B; --line:#1E293B; --hair:rgba(255,255,255,.08);
+  --bg:#0A111A; --surface:#131D2A; --surface-solid:#131D2A; --sunken:#0C1522; --ink:#F8FAFC; --ink-2:#BBC9CF; --muted:#94A3B8; --dim:#64748B; --line:#1F2E42; --hair:#1F2E42;
   --accent:#00D2FF; --accent-soft:rgba(0,210,255,.12); --accent-ink:#47D6FF;
-  --proj:#FBBF24; --context:#475569;
-  --good:#34D399; --good-soft:rgba(16,185,129,.14); --warn:#FBBF24; --warn-soft:rgba(251,191,36,.12); --crit:#FFB4AB; --crit-soft:rgba(255,99,88,.14);
-  --f-ui:"Geist","Segoe UI",system-ui,-apple-system,sans-serif;
-  --f-head:"Space Grotesk","Geist",system-ui,sans-serif;
-  --f-prose:"Geist","Segoe UI",system-ui,sans-serif;
+  --proj:#7DD3FC; --context:#475569;
+  --good:#10B981; --good-soft:rgba(16,185,129,.15); --warn:#F59E0B; --warn-soft:rgba(245,158,11,.15); --crit:#FB7185; --crit-soft:rgba(244,63,94,.15);
+  --f-ui:"Plus Jakarta Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-head:"Space Grotesk","Plus Jakarta Sans",system-ui,sans-serif;
+  --f-prose:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
   --f-data:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --r:4px;
   color-scheme:dark}}
@@ -230,47 +230,129 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 .lvl.ok{background:var(--good-soft);color:var(--good)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* ---- pelle Stitch: vetro, bagliori, tipografia tecnica ---- */
-body{background:radial-gradient(1200px 600px at 15% -5%,rgba(0,210,255,.07),transparent 60%),radial-gradient(900px 500px at 100% 20%,rgba(16,185,129,.05),transparent 60%),var(--bg);background-attachment:fixed;font-size:15px}
+/* ---- pelle Stitch "Electric Trust" (export Dashboard UI Redesign) ---- */
+body{background-color:var(--bg);background-image:radial-gradient(ellipse 80% 50% at 50% -20%,rgba(0,210,255,.12),transparent),radial-gradient(circle 600px at 90% 20%,rgba(16,185,129,.05),transparent),radial-gradient(circle 500px at 10% 80%,rgba(0,210,255,.04),transparent);background-attachment:fixed;font-size:15px;-webkit-font-smoothing:antialiased}
+::selection{background:rgba(0,210,255,.3);color:#fff}
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:#1E293B;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+.wrap{max-width:1280px}
 h1,h2,h3,.answer .when{font-family:var(--f-head)}
-h2{font-weight:600;letter-spacing:-.02em}
-.eyebrow,.kpi dt,th,.gauge-scale,.cfg-form legend,.field label{font-family:var(--f-data);text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:500;color:var(--muted)}
-.eyebrow{color:var(--accent)}
-.cfg-form legend{color:var(--ink-2)}
-.field label{color:var(--ink-2)}
-.panel,.card,.out-card,.table-wrap{background:var(--surface);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--hair);border-radius:8px}
-.panel.hero{border-top:1px solid rgba(0,210,255,.3);box-shadow:0 12px 32px -4px rgba(0,210,255,.12)}
-.toc{background:rgba(11,19,27,.82);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--hair)}
-.toc a{font-family:var(--f-data);font-size:.78rem;font-weight:500;letter-spacing:.04em;color:var(--muted)}
-.toc a:hover{background:var(--accent-soft);color:var(--accent)}
-.top{border-bottom:1px solid var(--hair)}
-.brand h1{font-weight:700;letter-spacing:-.03em}
-.brand svg{color:var(--accent);filter:drop-shadow(0 0 8px rgba(0,210,255,.45))}
-.big{font-weight:600;color:var(--ink);text-shadow:0 0 24px rgba(0,210,255,.25)}
-.cells{border-color:var(--line)}
-.cell.on{background:var(--accent);box-shadow:0 0 8px rgba(0,210,255,.45)}
-.cap{background:var(--line)}
-.badge{font-family:var(--f-data);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
-.badge.live{background:rgba(16,185,129,.12);color:#34D399}
-.badge.live .dot{box-shadow:0 0 8px #10B981}
-.btn{font-family:var(--f-data);font-weight:600;background:var(--accent);color:#0B131B;border:0}
-.btn:hover{color:#0B131B;box-shadow:0 0 16px rgba(0,210,255,.45)}
-.seg button{background:transparent;border-color:var(--hair);color:var(--muted);font-family:var(--f-data);font-size:.78rem}
-.seg button[aria-pressed="true"]{background:var(--accent);color:#0B131B;border-color:var(--accent)}
-.chips label{background:rgba(11,19,27,.6);border-color:var(--line);border-radius:4px}
-.chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--ink);box-shadow:0 0 8px rgba(0,210,255,.2)}
-.cfg-form select,.cfg-form input[type=number],.db-filters select,.search input{background:rgba(11,19,27,.8);border:1px solid var(--line);border-radius:4px;color:var(--ink)}
-.cfg-form select:focus,.cfg-form input:focus,.db-filters select:focus,.search input:focus{border-color:var(--accent);box-shadow:0 0 8px rgba(0,210,255,.25);outline:0}
-select option,select optgroup{background:#0F1B26;color:var(--ink)}
-th{background:rgba(20,35,50,.6)}
-.tip{background:rgba(20,35,50,.94);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);border:1px solid rgba(0,210,255,.3);box-shadow:0 12px 32px -4px rgba(0,210,255,.18)}
-.answer{background:var(--sunken);border:1px solid var(--hair)}
+h2{font-size:clamp(1.5rem,3.4vw,1.9rem);font-weight:700;letter-spacing:-.02em;color:#fff}
+h3{font-family:var(--f-ui);font-weight:700;color:#fff}
+.eyebrow{display:flex;align-items:center;gap:8px;font-family:var(--f-ui);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.ldot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);flex:none}
+.sec-head p{color:var(--muted);font-size:.92rem}
+.kpi dt,th,.gauge-scale,.cfg-form legend,.field label{font-family:var(--f-ui);text-transform:uppercase;letter-spacing:.06em;font-size:.7rem;font-weight:700;color:var(--muted)}
+.cfg-form legend,.field label{color:#CBD5E1;text-transform:none;letter-spacing:0;font-size:.82rem}
+
+/* testata */
+.top{align-items:center;border-bottom:1px solid var(--line);padding-block:4px 22px}
+.brand svg{width:54px;height:54px;padding:8px;border-radius:12px;background:linear-gradient(135deg,#00D2FF,#0284C7 55%,#0F172A);border:1px solid rgba(0,210,255,.4);box-shadow:0 0 24px rgba(0,210,255,.35);--ink:#fff;--accent:#E0F7FF}
+.brand h1{font-family:var(--f-head);font-weight:700;letter-spacing:-.03em;color:#fff;font-size:clamp(1.6rem,3.6vw,2.1rem)}
+.byline{color:var(--muted);font-size:.85rem}
+.byline b{color:#E2E8F0}
+.src{gap:10px}
+.badge{font-family:var(--f-ui);font-size:.75rem;font-weight:600;padding:6px 14px;letter-spacing:0;text-transform:none}
+.badge.live{background:rgba(16,185,129,.1);color:var(--good);border-color:rgba(16,185,129,.3);box-shadow:0 0 12px rgba(16,185,129,.2)}
+.badge.snap{background:var(--warn-soft);color:var(--warn);border-color:rgba(245,158,11,.3)}
+.badge.live .dot{animation:pulseDot 2s ease-in-out infinite}
+@keyframes pulseDot{0%,100%{transform:scale(1);opacity:1;box-shadow:0 0 4px #10B981}50%{transform:scale(1.4);opacity:.5;box-shadow:0 0 10px #10B981}}
+.btn{font-family:var(--f-ui);font-size:.78rem;font-weight:600;padding:7px 14px;border-radius:8px;background:var(--surface);color:#E2E8F0;border:1px solid var(--line)}
+.btn:hover{background:#162232;border-color:rgba(0,210,255,.5);color:#fff}
+.btn-cta{display:inline-flex;align-items:center;padding:7px 16px;border-radius:8px;font-size:.78rem;font-weight:700;text-decoration:none;color:#020617;background:linear-gradient(90deg,#00D2FF,#0284C7);box-shadow:0 0 18px rgba(0,210,255,.35);transition:transform .15s}
+.btn-cta:hover{transform:translateY(-2px);background:linear-gradient(90deg,#38BDF8,#0369A1)}
+
+/* indice a pillola */
+.toc{top:12px;margin:18px 0 26px;padding:6px;gap:6px;border:1px solid var(--line);border-radius:999px;background:rgba(19,29,42,.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:0 20px 40px -12px rgba(0,0,0,.6);scrollbar-width:none}
+.toc::-webkit-scrollbar{display:none}
+.toc a{font-family:var(--f-ui);font-size:.78rem;font-weight:500;letter-spacing:0;color:#CBD5E1;padding:6px 14px;border-radius:999px;white-space:nowrap;transition:background .15s,color .15s}
+.toc a:hover{background:#162232;color:#fff}
+.toc a.on{background:var(--accent);color:#020617;font-weight:700;box-shadow:0 0 12px rgba(0,210,255,.4)}
+
+/* schede */
+.panel,.card,.out-card,.table-wrap{background:var(--surface);border:1px solid var(--line);border-radius:16px;transition:border-color .25s cubic-bezier(.16,1,.3,1),box-shadow .25s cubic-bezier(.16,1,.3,1)}
+.panel:hover,.card:hover,.out-card:hover{border-color:rgba(0,210,255,.35);box-shadow:0 10px 30px -10px rgba(0,210,255,.15),0 0 1px 1px rgba(0,210,255,.2)}
+.panel{padding:24px}
+.summary{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px;margin-top:0}
+@media (max-width:960px){.summary{grid-template-columns:minmax(0,1fr)}}
+.hero .label{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.big{font-weight:800;color:#fff;text-shadow:0 0 20px rgba(255,255,255,.15)}
+.big .eur{color:var(--accent);font-weight:700}
+#resPct{color:var(--accent);font-weight:700;background:rgba(0,210,255,.1);border:1px solid rgba(0,210,255,.3);border-radius:4px;padding:1px 7px}
+.gauge{background:var(--sunken);border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:22px}
+.gauge-head{display:flex;justify-content:space-between;font-size:.75rem;font-weight:600;color:#CBD5E1;margin-bottom:8px}
+.gauge-head .num{color:var(--accent);font-weight:700}
+.glowbar{height:12px;border-radius:999px;background:#162232;padding:2px;margin-bottom:12px;box-shadow:inset 0 1px 3px rgba(0,0,0,.5)}
+.glowbar span{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0284C7,#00D2FF,#10B981);box-shadow:0 0 12px rgba(0,210,255,.7);transition:width 1s cubic-bezier(.16,1,.3,1)}
+.cells{height:22px;padding:3px;gap:3px;border:1px solid var(--line);border-radius:6px;background:#090F17}
+.cell{background:#162232}
+.cell.on{background:var(--accent);box-shadow:0 0 6px rgba(0,210,255,.5)}
+.cap{display:none}
+.gauge-scale{text-transform:none;letter-spacing:0;font-family:var(--f-data);font-weight:400;color:var(--dim)}
+.pill{font-size:.75rem;padding:4px 12px;border:1px solid transparent}
+.pill.good{border-color:rgba(16,185,129,.3)}.pill.warn{border-color:rgba(245,158,11,.3)}.pill.crit{border-color:rgba(244,63,94,.3)}.pill.neutral{background:#1E293B;border-color:#334155;color:#CBD5E1}
+.kpi-panel{display:flex;flex-direction:column}
+.kpi-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}
+.kpi-head h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:#CBD5E1}
+.chip-mono{font-family:var(--f-data);font-size:.72rem;color:var(--accent)}
+.kpis{gap:14px;flex:1}
+.kpi,.kpi:nth-child(odd),.kpi:nth-child(-n+2){border:1px solid var(--line);border-radius:12px;background:var(--sunken);padding:14px;transition:border-color .2s}
+.kpi:hover{border-color:rgba(0,210,255,.4)}
+.kpi dd{font-weight:700;color:#fff}
+.kpi dd small{color:var(--dim);font-weight:500}
+.kpi.k-good dd{color:var(--good)}.kpi.k-cyan dd{color:var(--accent)}.kpi.k-warn dd{color:var(--warn)}
+.kpi.k-hl{background:linear-gradient(135deg,var(--sunken),rgba(2,132,199,.2));border-color:rgba(0,210,255,.4);position:relative;overflow:hidden}
+.kpi.k-hl dt{color:var(--accent)}
+.kpi.k-hl dd{color:var(--accent);text-shadow:0 0 8px rgba(0,210,255,.4)}
+.kpi dd small{color:var(--dim)}
+.kpi.k-hl dd small{color:var(--muted);text-shadow:none}
+
+/* grafici e controlli */
+.chart{background:var(--sunken);border:1px solid var(--line);border-radius:12px;padding:10px 8px 6px}
+.chart text{fill:var(--dim)}
+.chart .lbl{fill:#CBD5E1}
+.chart polyline[stroke="var(--accent)"]{filter:drop-shadow(0 0 6px rgba(0,210,255,.55))}
+.chart path.bar{transition:fill-opacity .15s}
+.tip{background:rgba(19,29,42,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(0,210,255,.4);border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.6),0 0 1px 1px rgba(0,210,255,.3);color:#F1F5F9}
+.legend{font-size:.78rem;color:#CBD5E1}
+.seg{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:4px;padding:4px;background:var(--sunken);border:1px solid var(--line);border-radius:12px}
+.seg button{border:0;border-radius:8px;background:transparent;color:var(--muted);font-family:var(--f-ui);font-size:.76rem;font-weight:600;padding:7px 8px}
+.seg button:hover{color:#fff}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#020617;font-weight:700;box-shadow:0 0 12px rgba(0,210,255,.3)}
+.search .seg{display:inline-grid;grid-auto-flow:column;grid-template-columns:none;justify-self:start}
+.field label output{color:var(--accent);font-weight:700}
+input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:999px;background:#1E293B;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--accent);border:2px solid #fff;box-shadow:0 0 10px rgba(0,210,255,.8);cursor:pointer;transition:transform .15s}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--accent);border:2px solid #fff;box-shadow:0 0 10px rgba(0,210,255,.8)}
+.check{padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--sunken)}
+.answer{background:linear-gradient(135deg,#0C1D2E,var(--sunken));border:1px solid rgba(0,210,255,.4);border-radius:12px;box-shadow:0 0 24px rgba(0,210,255,.15)}
+.answer .when{color:#fff;font-weight:700}
+.scen-list li{border-bottom-color:var(--line)}
+
+/* configuratore, tabelle, guida */
+.chips label{background:var(--sunken);border-color:var(--line);border-radius:10px;color:#CBD5E1}
+.chips label:hover{border-color:rgba(0,210,255,.4)}
+.chips label:has(input:checked){border-color:var(--accent);background:rgba(0,210,255,.08);color:#fff;box-shadow:0 0 12px rgba(0,210,255,.18)}
+.cfg-form select,.cfg-form input[type=number],.db-filters select,.search input,#olStart{background:var(--sunken)!important;border:1px solid var(--line)!important;border-radius:10px!important;color:#F1F5F9!important}
+.cfg-form select:focus,.cfg-form input:focus,.db-filters select:focus,.search input:focus{border-color:var(--accent)!important;box-shadow:0 0 0 1px var(--accent),0 0 12px rgba(0,210,255,.25);outline:0}
+select option,select optgroup{background:var(--surface);color:#F1F5F9}
+th{background:#0F1823;color:var(--muted)}
+td{border-bottom-color:var(--line)}
+tr.current td{background:rgba(0,210,255,.06)}
+.quote tr.sub td{background:var(--sunken)}
 .quote tr.tot td{border-top:1px solid rgba(0,210,255,.4)}
-.quote tr.net td{background:var(--accent-soft);color:var(--ink)}
-.steps li::before{box-shadow:0 0 10px rgba(0,210,255,.3)}
-.card .amount{color:var(--accent)}
-footer{border-top:1px solid var(--hair)}
+.quote tr.net td{background:rgba(0,210,255,.1);color:#fff}
+.out-card h3,.card h3{color:#fff}
+.card .amount{color:var(--accent);font-weight:700}
+.steps li::before{border-color:var(--accent);background:rgba(0,210,255,.08);color:var(--accent);box-shadow:0 0 10px rgba(0,210,255,.3)}
+.callout{border-radius:0 12px 12px 0}
+.callout.info{background:rgba(0,210,255,.06)}
+footer{border-top:1px solid var(--line);color:var(--dim)}
+footer strong{color:#CBD5E1}
 .chart .wm{fill:var(--accent);opacity:.14}
+@media (prefers-reduced-motion:reduce){.glowbar span,.panel,.btn-cta{transition:none}.badge.live .dot{animation:none}}
+@media (max-width:520px){.toc{border-radius:14px}.panel{padding:18px 16px}.src{justify-content:flex-start}}
+@media (max-width:600px){.cfg-out .grid2{grid-template-columns:minmax(0,1fr)!important}.out-card{padding:16px 12px}.quote{font-size:.78rem}.quote td,.quote th{padding:6px 5px}.quote td.n{white-space:normal;font-size:.76rem}.quote .tag-no{white-space:normal}.quote tr td:last-child{white-space:nowrap}.quote tr.tot td:nth-child(3){font-size:.68rem;font-weight:500}}
 .search{display:grid;gap:12px}
 .search input{font:inherit;font-size:1rem;padding:12px 14px;width:100%}
 .search .seg{margin:0}
@@ -293,15 +375,15 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
         <path d="M31 14h4a3 3 0 0 1 3 3v15a3 3 0 0 0 6 0V22" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
       </svg>
       <div>
-        <p class="eyebrow">Contributo MIMIT · ricarica domestica · 22/9/2026 – 31/1/2027</p>
+        <p class="eyebrow"><span class="ldot"></span>Monitoraggio ufficiale · MIMIT &amp; Invitalia · sportello 22/9/2026 – 31/1/2027</p>
         <h1>Bonus Colonnine 2026</h1>
-        <p class="byline" id="bpSign">a cura di <b>IlBioPane</b></p>
+        <p class="byline" id="bpSign">Elaborazioni statistiche e modelli predittivi a cura di <b>IlBioPane</b></p>
       </div>
     </div>
     <div class="src">
       <span id="mode" class="badge load"><span class="dot"></span><span id="modeTxt">Connessione al contatore…</span></span>
       <button id="refresh" class="btn" type="button">Aggiorna ora</button>
-      <a id="pbiLink" href="#" target="_blank" rel="noopener">Fonte: Invitalia ↗</a>
+      <a id="pbiLink" class="btn-cta" href="#" target="_blank" rel="noopener">Fonte Invitalia ↗</a>
     </div>
   </header>
 
@@ -326,19 +408,22 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
       <p class="sub"><span id="resPct" class="num">41,3%</span> della dotazione di <span id="fundVal" class="num">14.475.000 €</span> (15 mln € lordi)</p>
       <p class="sub small muted" style="margin-top:4px">Ultima domanda registrata nel contatore: <span id="updVal">05/10/2026 17:04</span></p>
       <div class="gauge" role="img" id="gaugeLbl" aria-label="Indicatore del residuo">
+        <div class="gauge-head"><span>Stato di carica del plafond</span><span class="num" id="glowPct"></span></div>
+        <div class="glowbar"><span id="glowBar"></span></div>
         <div class="gauge-track"><div class="cells" id="cells"></div><div class="cap"></div></div>
         <div class="gauge-scale"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
       </div>
       <div class="pills" id="pills"></div>
     </div>
-    <div class="panel" style="padding:6px 6px">
+    <div class="panel kpi-panel">
+      <div class="kpi-head"><h3>Metriche e flusso delle domande</h3><span class="chip-mono" id="kpiUpd"></span></div>
       <dl class="kpis">
         <div class="kpi"><dt>Già impegnati</dt><dd id="kImp">8.498.296 €<small>58,7% del fondo</small></dd></div>
-        <div class="kpi"><dt>Domande presentate</dt><dd id="kDom">7.035<small>dal 22 settembre 2026</small></dd></div>
+        <div class="kpi k-good"><dt>Domande presentate</dt><dd id="kDom">7.035<small>dal 22 settembre 2026</small></dd></div>
         <div class="kpi"><dt>Contributo medio richiesto</dt><dd id="kAvg">1.208 €<small>per domanda</small></dd></div>
-        <div class="kpi"><dt>Ritmo ultimi 7 giorni</dt><dd id="kRate">414.348 €<small>al giorno, in media</small></dd></div>
-        <div class="kpi"><dt>Domande compilate non inviate</dt><dd id="kDraft">1.335<small>1.502.470 € potenziali</small></dd></div>
-        <div class="kpi"><dt>Esaurimento stimato</dt><dd id="kEnd">≈ 20 ott 2026<small>scenario a ritmo attuale</small></dd></div>
+        <div class="kpi k-cyan"><dt>Ritmo ultimi 7 giorni</dt><dd id="kRate">414.348 €<small>al giorno, in media</small></dd></div>
+        <div class="kpi k-warn"><dt>Domande compilate non inviate</dt><dd id="kDraft">1.335<small>1.502.470 € potenziali</small></dd></div>
+        <div class="kpi k-hl"><dt>Esaurimento stimato</dt><dd id="kEnd">≈ 20 ott 2026<small>scenario a ritmo attuale</small></dd></div>
       </dl>
     </div>
   </div>
@@ -347,7 +432,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
   <section class="block" id="previsione">
     <div class="sec-head">
       <div>
-        <p class="eyebrow">Previsione</p>
+        <p class="eyebrow"><span class="ldot"></span>Previsione</p>
         <h2>Quando finiscono i fondi del 2026?</h2>
         <p>Importi impegnati giorno per giorno dall'apertura dello sportello e proiezione fino all'esaurimento. Il modello usa il ritmo delle ultime due settimane, distinguendo giorni feriali, sabati e festivi.</p>
       </div>
@@ -375,7 +460,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
         </div>
         <label class="check"><input id="drafts" type="checkbox"> <span>Conta subito le domande già compilate ma non ancora inviate (<span id="draftAmt" class="num">1,50 mln €</span>)</span></label>
         <div class="answer" aria-live="polite">
-          <p class="eyebrow">Esaurimento stimato</p>
+          <p class="eyebrow"><span class="ldot"></span>Esaurimento stimato</p>
           <p class="when" id="ansDate">martedì 20 ottobre 2026</p>
           <p class="small muted" id="ansNote">tra circa 15 giorni</p>
         </div>
@@ -394,7 +479,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
   <section class="block" id="configuratore">
     <div class="sec-head">
       <div>
-        <p class="eyebrow">Il tuo caso</p>
+        <p class="eyebrow"><span class="ldot"></span>Il tuo caso</p>
         <h2>Cosa ti serve e quanto costa</h2>
         <p>Descrivi la tua installazione: la pagina ricava adempimenti, documenti da presentare e un preventivo di massima per la tua provincia, con IVA e contributo stimato.</p>
       </div>
@@ -416,7 +501,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
   <section class="block" id="colonnine" hidden>
     <div class="sec-head">
       <div>
-        <p class="eyebrow">Elenchi ufficiali GSE</p>
+        <p class="eyebrow"><span class="ldot"></span>Elenchi ufficiali GSE</p>
         <h2>La tua colonnina rientra nel bonus?</h2>
         <p>Il modello deve essere presente negli elenchi GSE dei dispositivi idonei, GDC o NO GDC, in vigore alla data della domanda. Cerca per marca, modello o codice prodotto.</p>
       </div>
@@ -424,7 +509,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
     <div class="panel">
       <form class="search" id="gseForm" role="search" autocomplete="off">
         <label class="sr" for="gseQ">Cerca la colonnina</label>
-        <input id="gseQ" type="search" placeholder="Es. Wallbox Pulsar Plus, Easee Charge, ABB Terra AC…" enterkeyhint="search">
+        <input id="gseQ" type="search" placeholder="Marca o modello della wallbox, es. Circontrol eNext" enterkeyhint="search">
         <div class="seg" id="gseList" role="group" aria-label="Elenco">
           <button type="button" data-l="" aria-pressed="true">Tutti</button><button type="button" data-l="GDC" aria-pressed="false">GDC</button><button type="button" data-l="NO GDC" aria-pressed="false">NO GDC</button>
         </div>
@@ -438,7 +523,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
   <section class="block" id="storico">
     <div class="sec-head">
       <div>
-        <p class="eyebrow">Confronto</p>
+        <p class="eyebrow"><span class="ldot"></span>Confronto</p>
         <h2>Gli sportelli precedenti</h2>
         <p>Stesso contatore, finestre passate. Il grafico allinea ogni sportello al giorno di apertura: in due settimane lo sportello 2026 ha impegnato più di quanto lo sportello 2024 avesse raccolto nei primi 45 giorni.</p>
       </div>
@@ -459,7 +544,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
 
   <!-- PROSPETTIVE -->
   <section class="block" id="prospettive">
-    <div class="sec-head"><div><p class="eyebrow">Prospettive</p><h2>Il bonus negli anni successivi</h2></div></div>
+    <div class="sec-head"><div><p class="eyebrow"><span class="ldot"></span>Prospettive</p><h2>Il bonus negli anni successivi</h2></div></div>
     <div class="grid2">
       <div><div class="prose">
           <p>Il DPCM del 10 giugno 2026 ha rifinanziato il bonus per cinque annualità, con risorse già stanziate. Ogni sportello annuale viene aperto da un decreto direttoriale del MIMIT; la data dello sportello 2027 non è ancora stata fissata.</p>
@@ -493,7 +578,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
           <input id="olStart" type="date" value="2027-09-21" style="font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
         </div>
         <div class="answer" aria-live="polite">
-          <p class="eyebrow">Fondi esauriti</p>
+          <p class="eyebrow"><span class="ldot"></span>Fondi esauriti</p>
           <p class="when"><span id="olDays">—</span></p>
           <p class="small muted">entro <span id="olDate">—</span> · il giorno di apertura assorbirebbe il <span id="olDay1" class="num">—</span> della dotazione</p>
         </div>
@@ -503,7 +588,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
 
   <!-- GUIDA -->
   <section class="block" id="guida">
-    <div class="sec-head"><div><p class="eyebrow">Guida pratica</p><h2>Chi può chiederlo e come fare domanda</h2><p>Regole dello sportello 2026, dal DPCM 10 giugno 2026 (art. 6) e dai decreti direttoriali del 4 agosto e dell'11 settembre 2026.</p></div></div>
+    <div class="sec-head"><div><p class="eyebrow"><span class="ldot"></span>Guida pratica</p><h2>Chi può chiederlo e come fare domanda</h2><p>Regole dello sportello 2026, dal DPCM 10 giugno 2026 (art. 6) e dai decreti direttoriali del 4 agosto e dell'11 settembre 2026.</p></div></div>
     <div class="cards">
       <div class="card">
         <h3>Persone fisiche</h3>
@@ -563,7 +648,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
   </section>
 
   <section class="block" id="documenti">
-    <div class="sec-head"><div><p class="eyebrow">Documentazione</p><h2>Documenti e modulistica</h2><p>I documenti vanno caricati in piattaforma a pena di improcedibilità (DDG 4 agosto 2026, art. 6, c. 7; DDG 11 settembre 2026, art. 3, c. 4).</p></div></div>
+    <div class="sec-head"><div><p class="eyebrow"><span class="ldot"></span>Documentazione</p><h2>Documenti e modulistica</h2><p>I documenti vanno caricati in piattaforma a pena di improcedibilità (DDG 4 agosto 2026, art. 6, c. 7; DDG 11 settembre 2026, art. 3, c. 4).</p></div></div>
     <div class="grid2">
       <div class="card">
         <h3>Da caricare con la domanda</h3>
@@ -598,7 +683,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
   </section>
 
   <section class="block" id="rimborso">
-    <div class="sec-head"><div><p class="eyebrow">Dopo la domanda</p><h2>Erogazione e controlli</h2></div></div>
+    <div class="sec-head"><div><p class="eyebrow"><span class="ldot"></span>Dopo la domanda</p><h2>Erogazione e controlli</h2></div></div>
     <div class="grid2">
       <div class="card">
         <h3>Come e quando arriva il contributo</h3>
@@ -635,7 +720,7 @@ mark{background:rgba(0,210,255,.22);color:inherit;border-radius:2px}
   </section>
 
   <section class="block" id="normativa">
-    <div class="sec-head"><div><p class="eyebrow">Fonti</p><h2>Riferimenti normativi</h2></div></div>
+    <div class="sec-head"><div><p class="eyebrow"><span class="ldot"></span>Fonti</p><h2>Riferimenti normativi</h2></div></div>
     <div class="card">
       <ul class="norms">
         <li><span class="tag">Base di legge</span><span>Art. 22, c. 1, DL 1 marzo 2022, n. 17 (conv. L. 27 aprile 2022, n. 34): Fondo per la filiera automotive, attuato con DPCM. Risorse del Fondo rideterminate dalla L. 207/2024.</span></li>

@@ -16,13 +16,13 @@ Dashboard non ufficiale sul **bonus colonnine domestiche** (contributo MIMIT ges
 - **Verifica della colonnina.** Ricerca per marca, modello o codice negli elenchi GSE dei dispositivi idonei (GDC e NO GDC), requisito obbligatorio del bonus. La sezione compare quando gli elenchi ufficiali sono stati importati (vedi sotto).
 - **Guida, documenti, erogazione, normativa e prospettive 2027–2030.**
 
-Grafica: tema scuro "Electric Trust" dal progetto Stitch *Dashboard UI Redesign* (Space Grotesk, Geist, JetBrains Mono, superfici in vetro, accento ciano `#00D2FF`).
+Grafica: tema scuro "Electric Trust" dall'export Stitch *Dashboard UI Redesign* (Plus Jakarta Sans, Space Grotesk, JetBrains Mono, schede luminose, indice a pillola con sezione attiva, accento ciano `#00D2FF`). Dal mockup Stitch sono stati presi solo layout e stile: i dati sono quelli ufficiali, non quelli d'esempio del mockup.
 
 ## Struttura del repository
 
 | Percorso | Contenuto |
 |---|---|
-| `condividi/Bonus Colonnine 2026 - IlBioPane.html` | **File da condividere.** Codice offuscato, dati codificati, si aggiorna in tempo reale quando viene aperto. |
+| `condividi/Bonus Colonnine 2026.html` | **File da condividere.** Codice offuscato, dati codificati, si aggiorna in tempo reale quando viene aperto. |
 | `dashboard.html` | Versione per gli Artifact di claude.ai: solo istantanea, senza codice di collegamento. |
 | `dev/Bonus Colonnine 2026 (sviluppo).html` | Versione leggibile per le prove. **Non va condivisa.** |
 | `src/page.html` | Struttura, stili e testi della pagina. |
@@ -56,11 +56,11 @@ Scarica gli elenchi GDC e NO GDC dalla pagina [GSE · Documenti](https://www.gse
 
 ```bash
 pip install openpyxl pdfplumber
-python3 tools/importa_elenchi_gse.py --data 21/09/2026 "Elenco GDC.xlsx" "Elenco NO GDC.pdf"
+python3 tools/importa_elenchi_gse.py --data "ottobre 2026" P541_Elenco_dispositivi_idonei_alla_sperimentazione_GDC.pdf P541_Elenco_dispositivi_idonei_alla_sperimentazione_NO_GDC.pdf
 python3 build.py
 ```
 
-Lo script riconosce le colonne dalle intestazioni e capisce dal nome del file se l'elenco è GDC o NO GDC (si può forzare con `GDC=file` o `NOGDC=file`).
+Lo script legge i PDF del GSE (una pagina per costruttore), oppure Excel e CSV riconoscendo le colonne dalle intestazioni, e capisce dal nome del file se l'elenco è GDC o NO GDC (si può forzare con `GDC=file` o `NOGDC=file`).
 
 ## Come sono calcolati i preventivi
 
@@ -76,3 +76,5 @@ Dashboard **non ufficiale**. Il dato dei fondi residui è quello ufficiale di In
 ## Licenza
 
 Tutti i diritti riservati © IlBioPane. Vietata la riproduzione, anche parziale, di testi, dati, codice ed elaborazioni senza autorizzazione dell'autore.
+
+Stato attuale: importato l'elenco **NO GDC** di ottobre 2026 (38 dispositivi, 15 costruttori). Manca l'elenco GDC: finché non viene importato, la ricerca avvisa che un modello assente potrebbe trovarsi nell'elenco GDC.

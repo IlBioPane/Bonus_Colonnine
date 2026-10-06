@@ -19,10 +19,13 @@ OUT = os.path.join(ROOT, "src", "data", "gse.json")
 
 KEYS = {
     "marca": ("costruttore", "produttore", "marca", "fabbricante", "ragione sociale", "manufacturer"),
-    "modello": ("modello", "nome commerciale", "denominazione", "model", "prodotto"),
-    "codice": ("codice", "part number", "sku", "articolo", "versione", "code"),
+    "modello": ("modello", "nome commerciale", "denominazione", "model"),
+    "versione": ("versione", "codice", "part number", "sku", "articolo", "code"),
     "potenza": ("potenza", "kw", "power"),
+    "alim": ("alimentazione", "fasi"),
+    "esterno": ("dispositivo esterno",),
 }
+# Formato degli elementi in gse.json: [marca, modello, versione, potenza, elenco, alimentazione, dispositivo esterno]
 
 def kind_of(path):
     base = os.path.basename(path).upper().replace("_", " ").replace("-", " ")
@@ -41,7 +44,7 @@ def find_header(rows):
             for j, h in enumerate(low):
                 if j not in cols.values() and any(w in h for w in words):
                     cols[k] = j; break
-        if "marca" in cols and "modello" in cols:
+        if "modello" in cols:
             return i, cols
     return None, None
 
@@ -50,35 +53,41 @@ def read_rows(path):
         import openpyxl
         wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
         for ws in wb.worksheets:
-            yield [list(r) for r in ws.iter_rows(values_only=True)]
+            yield [list(r) for r in ws.iter_rows(values_only=True)], ""
     elif path.lower().endswith(".pdf"):
         import pdfplumber
-        rows = []
+        # elenchi GSE: una pagina per costruttore, con il nome sopra la riga "SITO INTERNET"
+        brand = ""
         with pdfplumber.open(path) as pdf:
             for page in pdf.pages:
+                lines = [clean(l) for l in (page.extract_text() or "").splitlines()]
+                for j, l in enumerate(lines):
+                    if l.upper().startswith("SITO INTERNET") and j > 0:
+                        brand = lines[j - 1]; break
                 for t in page.extract_tables():
-                    rows.extend(t)
-        yield rows
+                    yield t, brand
     elif path.lower().endswith(".csv"):
         import csv
         with open(path, encoding="utf-8-sig") as f:
             sample = f.read(4096); f.seek(0)
-            yield list(csv.reader(f, dialect=csv.Sniffer().sniff(sample, ";,\t")))
+            yield list(csv.reader(f, dialect=csv.Sniffer().sniff(sample, ";,\t"))), ""
     else:
         sys.exit("Formato non supportato: %s" % path)
 
 def parse(path, kind):
     items = []
-    for rows in read_rows(path):
+    for rows, brand in read_rows(path):
         h, cols = find_header(rows)
         if h is None: continue
-        last_marca = ""
+        last_marca = last_mod = ""
         for r in rows[h + 1:]:
             get = lambda k: clean(r[cols[k]]) if k in cols and cols[k] < len(r) else ""
-            marca, modello = get("marca") or last_marca, get("modello")
-            if not modello or modello.lower() in KEYS["modello"]: continue   # righe vuote o intestazioni ripetute
-            last_marca = marca
-            items.append([marca, modello, get("codice"), get("potenza"), kind])
+            nd = lambda x: "" if x in ("-", "–") else x
+            marca = get("marca") or last_marca or brand
+            modello = get("modello") or last_mod                             # celle unite: il modello vale per le righe sotto
+            if not modello or modello.lower() in KEYS["modello"] or not any(clean(c) for c in r): continue
+            last_marca, last_mod = marca, modello
+            items.append([marca, modello, nd(get("versione")), get("potenza"), kind, get("alim"), nd(get("esterno"))])
     if not items:
         sys.exit("Nessuna riga riconosciuta in %s: controlla le intestazioni delle colonne" % path)
     return items

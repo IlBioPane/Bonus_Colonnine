@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera le due versioni della dashboard Bonus Colonnine 2026 (IlBioPane).
 
-- condividi/Bonus Colonnine 2026 - IlBioPane.html  file da condividere: si aggiorna in tempo reale, codice offuscato
+- condividi/Bonus Colonnine 2026.html  file da condividere: si aggiorna in tempo reale, codice offuscato
 - dashboard.html                                 versione Artifact (istantanea, senza codice di collegamento)
 - dev/Bonus Colonnine 2026 (sviluppo).html        versione leggibile per le prove
 """
@@ -31,7 +31,7 @@ def data_js():
 def bundle(live):
     parts = [data_js(), rd("protect.js")]
     if live: parts.append(rd("live.js"))
-    parts += [rd("core.js"), rd("configurator.js"), rd("colonnine.js")]
+    parts += [rd("core.js"), rd("configurator.js"), rd("colonnine.js"), rd("ui.js")]
     return '(() => {\n"use strict";\n' + "\n".join(parts) + "\n})();\n"
 
 def ensure_obfuscator():
@@ -74,7 +74,7 @@ def main():
     os.makedirs(os.path.join(ROOT, "dev"), exist_ok=True)
     share = full_doc(page.replace("/*__APP__*/", obfuscate(bundle(True), hard=True)))
     check_clean("file da condividere", share)
-    open(os.path.join(ROOT, "condividi", "Bonus Colonnine 2026 - IlBioPane.html"), "w", encoding="utf-8").write(share)
+    open(os.path.join(ROOT, "condividi", "Bonus Colonnine 2026.html"), "w", encoding="utf-8").write(share)
     art = page.replace("/*__APP__*/", obfuscate(bundle(False)))
     check_clean("dashboard.html", art)
     open(os.path.join(ROOT, "dashboard.html"), "w", encoding="utf-8").write(art)
