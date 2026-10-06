@@ -200,7 +200,7 @@ COSTI = {
 }
 
 # ---------------------------------------------------------------- province
-# Coefficiente sulla manodopera rispetto alla media nazionale (1,00). Stima BioPane: livello regionale dei
+# Coefficiente sulla manodopera rispetto alla media nazionale (1,00). Stima IlBioPane: livello regionale dei
 # prezzari delle opere e del costo orario degli installatori, più una maggiorazione per le grandi aree urbane.
 REG = {"Piemonte": 1.02, "Valle d'Aosta": 1.07, "Lombardia": 1.06, "Trentino-Alto Adige": 1.10, "Veneto": 1.03,
        "Friuli-Venezia Giulia": 1.02, "Liguria": 1.04, "Emilia-Romagna": 1.04, "Toscana": 1.03, "Umbria": 0.97,

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Genera le due versioni della dashboard Bonus Colonnine 2026 (BioPane).
+"""Genera le due versioni della dashboard Bonus Colonnine 2026 (IlBioPane).
 
-- condividi/Bonus Colonnine 2026 - BioPane.html  file da condividere: si aggiorna in tempo reale, codice offuscato
+- condividi/Bonus Colonnine 2026 - IlBioPane.html  file da condividere: si aggiorna in tempo reale, codice offuscato
 - dashboard.html                                 versione Artifact (istantanea, senza codice di collegamento)
 - dev/Bonus Colonnine 2026 (sviluppo).html        versione leggibile per le prove
 """
@@ -58,7 +58,7 @@ def obfuscate(code, hard=False):
 def full_doc(body):
     return ('<!doctype html><html lang="it"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
-            '<meta name="author" content="BioPane"><meta name="copyright" content="BioPane">'
+            '<meta name="author" content="IlBioPane"><meta name="copyright" content="IlBioPane">'
             '</head><body>\n' + body + "\n</body></html>\n")
 
 def check_clean(name, html):
@@ -73,7 +73,7 @@ def main():
     os.makedirs(os.path.join(ROOT, "dev"), exist_ok=True)
     share = full_doc(page.replace("/*__APP__*/", obfuscate(bundle(True), hard=True)))
     check_clean("file da condividere", share)
-    open(os.path.join(ROOT, "condividi", "Bonus Colonnine 2026 - BioPane.html"), "w", encoding="utf-8").write(share)
+    open(os.path.join(ROOT, "condividi", "Bonus Colonnine 2026 - IlBioPane.html"), "w", encoding="utf-8").write(share)
     art = page.replace("/*__APP__*/", obfuscate(bundle(False)))
     check_clean("dashboard.html", art)
     open(os.path.join(ROOT, "dashboard.html"), "w", encoding="utf-8").write(art)

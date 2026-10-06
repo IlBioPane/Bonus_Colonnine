@@ -1,13 +1,13 @@
-# Bonus Colonnine 2026 · BioPane
+# Bonus Colonnine 2026 · IlBioPane
 
 Dashboard non ufficiale sul **bonus colonnine domestiche** (contributo MIMIT gestito da Invitalia): fondi residui in tempo reale, previsione di esaurimento, configuratore dei casi d'installazione con preventivo per provincia, guida alla domanda e riferimenti normativi. Tutto in un'unica pagina HTML.
 
-© BioPane. Tutti i diritti riservati.
+© IlBioPane. Tutti i diritti riservati.
 
 ## Cosa contiene la pagina
 
 - **Fondi residui in tempo reale.** Il residuo dello sportello 2026 (dotazione netta 14.475.000 €) è il dato ufficiale pubblicato da Invitalia. La pagina lo rilegge all'apertura e poi ogni 10 minuti. Se il collegamento non riesce mostra l'ultima istantanea inclusa nel file, con data e ora.
-- **Previsione di esaurimento.** Scenari interattivi basati sul ritmo giornaliero delle domande, confrontati con gli sportelli 2023–2025. Le previsioni sono stime di BioPane calcolate a partire dal dato ufficiale dei fondi rimanenti.
+- **Previsione di esaurimento.** Scenari interattivi basati sul ritmo giornaliero delle domande, confrontati con gli sportelli 2023–2025. Le previsioni sono stime di IlBioPane calcolate a partire dal dato ufficiale dei fondi rimanenti.
 - **Configuratore "Cosa ti serve e quanto costa".** Chiede chi presenta la domanda (proprietario, inquilino, condominio), dove si installa (posto all'aperto, box, box o posto in autorimessa), superficie dell'autorimessa, contatore, potenza della wallbox, posa del cavo, eventuali vincoli e provincia. Restituisce:
   - adempimenti obbligatori e da verificare: delibera o comunicazione condominiale, pratica antincendio, progetto, dichiarazione di conformità, elenchi GSE, POD, vincoli. Ogni voce ha il suo riferimento normativo;
   - documenti da caricare nella domanda e da conservare;
@@ -19,14 +19,14 @@ Dashboard non ufficiale sul **bonus colonnine domestiche** (contributo MIMIT ges
 
 | Percorso | Contenuto |
 |---|---|
-| `condividi/Bonus Colonnine 2026 - BioPane.html` | **File da condividere.** Codice offuscato, dati codificati, si aggiorna in tempo reale quando viene aperto. |
+| `condividi/Bonus Colonnine 2026 - IlBioPane.html` | **File da condividere.** Codice offuscato, dati codificati, si aggiorna in tempo reale quando viene aperto. |
 | `dashboard.html` | Versione per gli Artifact di claude.ai: solo istantanea, senza codice di collegamento. |
 | `dev/Bonus Colonnine 2026 (sviluppo).html` | Versione leggibile per le prove. **Non va condivisa.** |
 | `src/page.html` | Struttura, stili e testi della pagina. |
 | `src/core.js` | Indicatori, grafici e previsioni. |
 | `src/configurator.js` | Configuratore: domande, motore delle regole, preventivo, elenco delle casistiche. |
 | `src/live.js` | Lettura in tempo reale del dato ufficiale. |
-| `src/protect.js` | Filigrana e firma BioPane, deterrenti alla copia, controllo d'integrità della firma. |
+| `src/protect.js` | Filigrana e firma IlBioPane, deterrenti alla copia, controllo d'integrità della firma. |
 | `src/data/*.json` | Istantanea, storico degli sportelli, regole, costi e coefficienti provinciali. |
 | `tools/genera_dati_configuratore.py` | Fonte leggibile di testi normativi, riferimenti, voci di costo e coefficienti delle 107 province: rigenera `cfg.json`, `costi.json` e `province.json`. |
 | `aggiorna_dati.py` | Aggiorna l'istantanea dal dato ufficiale e rigenera le pagine. |
@@ -54,8 +54,8 @@ Prima di salvare, `build.py` controlla che nei file da condividere non compaiano
 
 ## Avvertenze
 
-Dashboard **non ufficiale**. Il dato dei fondi residui è quello ufficiale di Invitalia. Previsioni, regole del configuratore e preventivi sono stime di BioPane, ricavate da quel dato e dalle fonti normative citate nella pagina: non hanno valore ufficiale e non sostituiscono il parere di un tecnico abilitato o un preventivo reale. Per requisiti, scadenze e importi fanno fede solo i provvedimenti di MIMIT e Invitalia.
+Dashboard **non ufficiale**. Il dato dei fondi residui è quello ufficiale di Invitalia. Previsioni, regole del configuratore e preventivi sono stime di IlBioPane, ricavate da quel dato e dalle fonti normative citate nella pagina: non hanno valore ufficiale e non sostituiscono il parere di un tecnico abilitato o un preventivo reale. Per requisiti, scadenze e importi fanno fede solo i provvedimenti di MIMIT e Invitalia.
 
 ## Licenza
 
-Tutti i diritti riservati © BioPane. Vietata la riproduzione, anche parziale, di testi, dati, codice ed elaborazioni senza autorizzazione dell'autore.
+Tutti i diritti riservati © IlBioPane. Vietata la riproduzione, anche parziale, di testi, dati, codice ed elaborazioni senza autorizzazione dell'autore.

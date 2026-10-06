@@ -1,5 +1,5 @@
-/* ---------- Firma BioPane: filigrana, attribuzione e deterrenti alla copia ---------- */
-const AUTHOR = "BioPane";
+/* ---------- Firma IlBioPane: filigrana, attribuzione e deterrenti alla copia ---------- */
+const AUTHOR = "IlBioPane";
 const _g = (id) => document.getElementById(id);
 function wmSvg(W, H) { return `<text class="wm" x="${W - 6}" y="${H - 4}" text-anchor="end">© ${AUTHOR}</text>`; }
 
