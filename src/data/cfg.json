@@ -1,1 +1,296 @@
-{"refs": {"dm37": {"t": "DM 37/2008", "url": null}, "dpcm2026": {"t": "DPCM 10/6/2026", "url": null}, "ddg0408": {"t": "DDG 4/8/2026", "url": null}, "ddg1109": {"t": "DDG 11/9/2026", "url": null}}, "testi": {"delibera": {"t": "Bozza: delibera", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "comunicazione": {"t": "Bozza: comunicazione", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "inquilino": {"t": "Bozza: inquilino", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "vvf_a": {"t": "Bozza: vvf_a", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "vvf_bc": {"t": "Bozza: vvf_bc", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "vvf_noscia": {"t": "Bozza: vvf_noscia", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "vvf_misure": {"t": "Bozza: vvf_misure", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "vvf_verifica": {"t": "Bozza: vvf_verifica", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "vvf_le300": {"t": "Bozza: vvf_le300", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "vvf_no": {"t": "Bozza: vvf_no", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "progetto_inst": {"t": "Bozza: progetto_inst", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "dico": {"t": "Bozza: dico", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "gse": {"t": "Bozza: gse", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "pod": {"t": "Bozza: pod", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "aumento": {"t": "Bozza: aumento", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "potenza_insuff": {"t": "Bozza: potenza_insuff", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "culturale": {"t": "Bozza: culturale", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "paesaggio": {"t": "Bozza: paesaggio", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "edilizia": {"t": "Bozza: edilizia", "d": "<p>Testo in preparazione.</p>", "r": ["dm37"]}, "progetto_prof": {"t": "Bozza progetto", "d": "Testo.", "cond": "c", "rischio": "r", "pot": "p", "r": ["dm37"]}, "cei": {"t": "Bozza CEI", "d": "Testo.", "esterno": "e", "r": []}}, "docs": {"base": ["doc base"], "condominio": ["cf condominio"], "delegato": "delegato", "amministratore": "amm", "attestazione": "attestazione", "pod": "pod", "vvf": "vvf", "conservare": ["fatture"], "progetto": "progetto"}}
+{
+ "refs": {
+  "dpcm2026": {
+   "t": "DPCM 10/6/2026, art. 6",
+   "n": "contributo 80%, massimali 1.500 € e 8.000 €",
+   "url": "https://www.mimit.gov.it/it/normativa/altri-atti-amministrativi/decreto-del-presidente-del-consiglio-dei-ministri-10-giugno-2026-nuovo-piano-incentivi-per-le-imprese-della-filiera-automotive"
+  },
+  "ddg0408": {
+   "t": "DDG MIMIT 4/8/2026",
+   "n": "spese ammissibili, documenti, erogazione",
+   "url": "https://www.mimit.gov.it/it/normativa/decreti-direttoriali/decreto-direttoriale-4-agosto-2026-bonus-colonnine-domestiche-contributi-per-le-infrastrutture-di-ricarica"
+  },
+  "ddg1109": {
+   "t": "DDG MIMIT 11/9/2026",
+   "n": "apertura dello sportello 2026",
+   "url": "https://www.mimit.gov.it/images/stories/normativa/DECRETO_APERTURA_COLONNINE_2026_signed-nf.pdf"
+  },
+  "faq": {
+   "t": "FAQ MIMIT bonus colonnine domestiche",
+   "n": "chiarimenti ufficiali",
+   "url": "https://www.mimit.gov.it/it/assistenza/domande-frequenti/bonus-colonnine-domestiche-risposte-alle-domande-frequenti-faq"
+  },
+  "dm37": {
+   "t": "DM 22/1/2008 n. 37, artt. 5 e 7",
+   "n": "progetto e dichiarazione di conformità",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.ministeriale:2008-01-22;37"
+  },
+  "cc1122bis": {
+   "t": "Codice civile, art. 1122-bis",
+   "n": "ricarica del singolo condomino, preventiva notizia all'amministratore",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art1122bis"
+  },
+  "dl83": {
+   "t": "DL 83/2012, art. 17-quinquies",
+   "n": "maggioranze e diritto di installare in condominio",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-06-22;83~art17quinquies"
+  },
+  "cc1136": {
+   "t": "Codice civile, artt. 1136 e 1137",
+   "n": "maggioranze assembleari e impugnazione delle delibere",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art1136"
+  },
+  "dpr151": {
+   "t": "DPR 1/8/2011 n. 151, attività 75",
+   "n": "autorimesse oltre 300 m² soggette ai controlli VVF",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2011-08-01;151"
+  },
+  "vvf2018": {
+   "t": "Circolare VVF DCPREV n. 2 del 5/11/2018 (testo coordinato 2022)",
+   "n": "linee guida per le infrastrutture di ricarica",
+   "url": "https://www.vigilfuoco.it/servizi-le-aziende-e-i-professionisti/prevenzione-incendi/testi-coordinati-di-prevenzione"
+  },
+  "dm2020": {
+   "t": "DM 15/5/2020",
+   "n": "regola tecnica antincendio delle autorimesse (RTV V.6)",
+   "url": "https://www.gazzettaufficiale.it/eli/id/2020/05/26/20A02797/sg"
+  },
+  "cei648": {
+   "t": "Norma CEI 64-8, sezione 722",
+   "n": "alimentazione dei veicoli elettrici",
+   "url": null
+  },
+  "cei61851": {
+   "t": "Norma CEI EN 61851-1",
+   "n": "sistemi di ricarica conduttiva (modo 3)",
+   "url": null
+  },
+  "arera541": {
+   "t": "Delibera ARERA 541/2020/R/eel, art. 4",
+   "n": "requisiti dei dispositivi di ricarica",
+   "url": "https://www.arera.it/atti-e-provvedimenti/dettaglio/20/541-20"
+  },
+  "gse": {
+   "t": "Elenchi GSE dei dispositivi idonei",
+   "n": "elenchi GDC e NO GDC",
+   "url": "https://www.gse.it/servizi-per-te/news/mobilita-elettrica-pubblicati-gli-elenchi-aggiornati-dei-dispositivi-di-ricarica-idonei-alla-sperimentazione-arera"
+  },
+  "arera_tic": {
+   "t": "ARERA, TIC (Testo integrato connessioni)",
+   "n": "contributi per nuove connessioni e aumenti di potenza",
+   "url": "https://www.arera.it/consumatori/elettricita"
+  },
+  "dpr380": {
+   "t": "DPR 380/2001, art. 6",
+   "n": "edilizia libera",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2001-06-06;380~art6"
+  },
+  "dlgs257": {
+   "t": "D.Lgs. 257/2016, art. 15",
+   "n": "semplificazioni per i punti di ricarica",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2016-12-16;257~art15"
+  },
+  "dlgs42": {
+   "t": "D.Lgs. 42/2004, artt. 21 e 146",
+   "n": "beni culturali e paesaggio",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42"
+  },
+  "dpr31": {
+   "t": "DPR 31/2017",
+   "n": "interventi esclusi o semplificati per l'autorizzazione paesaggistica",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2017-02-13;31"
+  }
+ },
+ "testi": {
+  "delibera": {
+   "t": "Delibera dell'assemblea condominiale",
+   "d": "<p>L'installazione sulle parti comuni va approvata in assemblea, in prima o seconda convocazione, con la maggioranza dell'art. 1136, comma 2, c.c.: maggioranza degli intervenuti e almeno metà del valore dell'edificio.</p><p>Per il bonus va caricata la delibera con la dichiarazione che non è stata impugnata entro i termini dell'art. 1137 c.c.</p>",
+   "r": [
+    "dl83",
+    "cc1136",
+    "ddg0408"
+   ]
+  },
+  "comunicazione": {
+   "t": "Preventiva notizia all'amministratore",
+   "d": "<p>Il singolo condomino può installare a sue spese un punto di ricarica a uso privato, anche se i lavori interessano le parti comuni (passaggio di cavi, canaline). Deve però avvisare prima l'amministratore, che ne riferisce all'assemblea.</p><p>Se servono opere sulle parti comuni e il condominio non delibera entro tre mesi dalla richiesta scritta, il condomino può procedere da solo. Non può prelevare corrente dal contatore condominiale senza un accordo: di solito si usa il contatore del proprio appartamento o un nuovo contatore dedicato.</p>",
+   "r": [
+    "cc1122bis",
+    "dl83"
+   ]
+  },
+  "inquilino": {
+   "t": "Disponibilità dell'area se sei in affitto",
+   "d": "<p>Il bonus richiede che il posto auto sia nella tua piena disponibilità. Tieni a portata di mano il contratto di locazione o comodato registrato, che comprenda il box o il posto auto.</p><p>Conviene avere anche il consenso scritto del proprietario ai lavori, perché l'impianto resta nell'immobile. In condominio la preventiva notizia all'amministratore resta necessaria.</p>",
+   "r": [
+    "dpcm2026",
+    "faq"
+   ]
+  },
+  "vvf_a": {
+   "t": "Autorimessa soggetta ai Vigili del Fuoco (categoria {cat})",
+   "d": "<p>Oltre 300 m² l'autorimessa è l'attività 75 del DPR 151/2011, categoria A fino a 1.000 m². Le linee guida VVF del 2018 considerano un punto di ricarica realizzato secondo le loro indicazioni una modifica che non aggrava il rischio di incendio.</p><p>In quel caso non serve una nuova SCIA. Un tecnico abilitato deve però verificare e attestare il rispetto delle linee guida, e l'amministratore conserva questa documentazione con il fascicolo antincendio. Se le linee guida non si possono rispettare, serve un aggiornamento della SCIA.</p>",
+   "r": [
+    "dpr151",
+    "vvf2018",
+    "dm2020"
+   ]
+  },
+  "vvf_bc": {
+   "t": "Autorimessa soggetta ai Vigili del Fuoco (categoria {cat})",
+   "d": "<p>Sopra i 1.000 m² l'autorimessa è attività 75 in categoria B (fino a 3.000 m²) o C (oltre). Per queste categorie le modifiche che aggravano il rischio richiedono la valutazione del progetto da parte del Comando VVF prima dei lavori, poi la SCIA.</p><p>Un impianto conforme alle linee guida VVF del 2018 di norma non aggrava il rischio. Serve comunque una valutazione firmata da un tecnico antincendio, da concordare con l'amministratore. Ogni nuova colonnina va inserita nel fascicolo e nel registro dei controlli.</p>",
+   "r": [
+    "dpr151",
+    "vvf2018",
+    "dm2020"
+   ]
+  },
+  "vvf_noscia": {
+   "t": "Prima va messa in regola l'autorimessa",
+   "d": "<p>Un'autorimessa oltre 300 m² senza SCIA o CPI valido non è in regola. Installare punti di ricarica senza prima regolarizzarla espone a sanzioni e a problemi assicurativi.</p><p>Chiedi all'amministratore di avviare la pratica: SCIA per la categoria A, valutazione del progetto e poi SCIA per le categorie B e C. Tempi e costi della regolarizzazione non sono compresi nel preventivo.</p>",
+   "r": [
+    "dpr151",
+    "dm2020"
+   ]
+  },
+  "vvf_misure": {
+   "t": "Misure antincendio per la colonnina",
+   "d": "<p>Ricarica in modo 3, con wallbox fissa conforme alla CEI EN 61851-1: niente presa domestica. Serve un comando di sgancio d'emergenza segnalato e facile da raggiungere, di solito vicino all'accesso dell'autorimessa, che tolga tensione a tutti i punti di ricarica.</p><p>Il punto di ricarica non va posizionato lungo le vie d'esodo e va protetto dagli urti. Servono cartellonistica e un'eventuale integrazione dei mezzi di estinzione, secondo la valutazione del tecnico.</p>",
+   "r": [
+    "vvf2018",
+    "cei61851"
+   ]
+  },
+  "vvf_verifica": {
+   "t": "Verifica la superficie dell'autorimessa",
+   "d": "<p>Gli adempimenti dipendono dalla superficie coperta complessiva dell'autorimessa, comprese corsie e box: fino a 300 m² non è soggetta ai controlli VVF, oltre sì.</p><p>Chiedi all'amministratore la superficie e se esiste la SCIA o il CPI antincendio, poi aggiorna la risposta qui sopra.</p>",
+   "r": [
+    "dpr151"
+   ]
+  },
+  "vvf_le300": {
+   "t": "Antincendio: nessuna pratica, ma buone regole",
+   "d": "<p>Fino a 300 m² l'autorimessa non è soggetta ai controlli dei Vigili del Fuoco. Conviene comunque seguire le linee guida VVF del 2018: wallbox fissa in modo 3, protezione dagli urti, sgancio facile da raggiungere.</p>",
+   "r": [
+    "dpr151",
+    "vvf2018"
+   ]
+  },
+  "vvf_no": {
+   "t": "Antincendio: nessun adempimento",
+   "d": "<p>Posti all'aperto e box con accesso diretto dall'esterno, non collegati a un'autorimessa comune, di norma non rientrano nell'attività 75 del DPR 151/2011.</p>",
+   "r": [
+    "dpr151"
+   ]
+  },
+  "progetto_inst": {
+   "t": "Progetto a cura dell'installatore",
+   "d": "<p>Sotto le soglie del DM 37/2008, art. 5, comma 2, il progetto lo redige il responsabile tecnico dell'impresa installatrice. Non serve un professionista iscritto all'albo.</p>",
+   "r": [
+    "dm37"
+   ]
+  },
+  "progetto_prof": {
+   "t": "Progetto firmato da un professionista",
+   "d": "<p>Il progetto dell'impianto va redatto da un ingegnere o perito industriale iscritto all'albo (DM 37/2008, art. 5, comma 2). La spesa di progettazione rientra tra quelle ammesse al bonus.",
+   "cond": "Lo prevede la lettera a) per tutte le utenze condominiali.</p>",
+   "rischio": "Lo prevede la lettera d): un'autorimessa soggetta ai controlli VVF è un ambiente a maggior rischio in caso di incendio.</p>",
+   "pot": "Lo prevede la lettera a): con la wallbox la potenza impegnata supera i 6 kW.</p>",
+   "r": [
+    "dm37"
+   ]
+  },
+  "dico": {
+   "t": "Dichiarazione di conformità dell'impianto",
+   "d": "<p>A fine lavori l'installatore abilitato rilascia la dichiarazione di conformità (DM 37/2008, art. 7) con i suoi allegati: progetto, relazione dei materiali e visura camerale. Va caricata nella domanda: senza, la domanda è improcedibile.</p>",
+   "r": [
+    "dm37",
+    "ddg0408"
+   ]
+  },
+  "cei": {
+   "t": "Requisiti tecnici dell'impianto",
+   "d": "<p>Linea dedicata alla wallbox, protezione da sovracorrenti per ogni punto di ricarica e differenziale di tipo A con rilevazione della corrente continua (6 mA) oppure di tipo B, come prevede la CEI 64-8, sezione 722. La wallbox deve essere conforme alla CEI EN 61851-1.</p>",
+   "esterno": "<p>All'aperto la wallbox deve avere un grado di protezione di almeno IP44 e resistenza agli urti adeguata. Le linee interrate vanno posate in tubo protettivo, con cavi idonei alla posa interrata.</p>",
+   "r": [
+    "cei648",
+    "cei61851"
+   ]
+  },
+  "gse": {
+   "t": "Wallbox presente negli elenchi GSE",
+   "d": "<p>Il modello deve risultare negli elenchi GSE dei dispositivi idonei (GDC o NO GDC) in vigore alla data della domanda e rispettare l'art. 4 della delibera ARERA 541/2020. Controlla il modello esatto prima di comprarlo: l'installatore lo attesta nel modello Invitalia.</p>",
+   "r": [
+    "gse",
+    "arera541",
+    "ddg0408"
+   ]
+  },
+  "pod": {
+   "t": "Nuovo contatore (POD) dedicato",
+   "d": "<p>La richiesta di connessione si fa tramite un venditore di energia, che la inoltra al distributore locale. I contributi di allaccio sono fissati da ARERA e, per un nuovo POD, sono spese ammesse al bonus.</p><p>Tempi tipici: da 2 a 8 settimane. Un contatore in un box diverso dall'abitazione di residenza di solito ha una tariffa per uso non residente, con quote fisse più alte.</p>",
+   "r": [
+    "arera_tic",
+    "dpcm2026"
+   ]
+  },
+  "aumento": {
+   "t": "Aumento di potenza da {da} a {a} kW",
+   "d": "<p>L'aumento si chiede al proprio venditore di energia. Il distributore applica un contributo per ogni kW in più, fissato da ARERA, più oneri amministrativi. Questa spesa non è tra quelle ammesse al bonus, che copre solo l'allaccio di un nuovo POD.</p><p>Con la gestione dinamica della potenza spesso l'aumento si può evitare o ridurre.</p>",
+   "r": [
+    "arera_tic"
+   ]
+  },
+  "potenza_insuff": {
+   "t": "Potenza del contatore insufficiente",
+   "d": "<p>Senza gestione dinamica, la wallbox alla massima potenza e i consumi di casa superano la potenza del contatore, che scatterebbe. Puoi aumentare la potenza, limitare la corrente della wallbox o aggiungere un sensore di gestione dinamica.</p>",
+   "r": []
+  },
+  "culturale": {
+   "t": "Autorizzazione della Soprintendenza",
+   "d": "<p>Su un bene culturale vincolato qualsiasi intervento, anche impiantistico, richiede l'autorizzazione della Soprintendenza (D.Lgs. 42/2004, art. 21, comma 4). Presenta la richiesta prima di iniziare i lavori. Il costo della pratica non è coperto dal bonus.</p>",
+   "r": [
+    "dlgs42"
+   ]
+  },
+  "paesaggio": {
+   "t": "Vincolo paesaggistico: verifica con il Comune",
+   "d": "<p>Una wallbox all'interno di un box o non visibile dall'esterno di norma non richiede autorizzazione paesaggistica. Se resta all'aperto e visibile, verifica con l'ufficio tecnico del Comune se l'intervento è escluso (DPR 31/2017, allegato A) o richiede l'autorizzazione semplificata (allegato B).</p>",
+   "r": [
+    "dlgs42",
+    "dpr31"
+   ]
+  },
+  "edilizia": {
+   "t": "Nessun titolo edilizio",
+   "d": "<p>L'installazione di un punto di ricarica privato è attività di edilizia libera: non servono permessi né comunicazioni al Comune, se non ci sono opere edili rilevanti. Scavi importanti o interventi sulle facciate possono richiedere una CILA.</p>",
+   "r": [
+    "dpr380",
+    "dlgs257"
+   ]
+  }
+ },
+ "docs": {
+  "base": [
+   "Documento d'identità e codice fiscale del richiedente",
+   "Fatture elettroniche in formato <b>XML</b> (non basta il PDF)",
+   "Estratti conto con i pagamenti tracciabili (bonifico, SCT o carta) da un conto intestato a te",
+   "Dichiarazione di conformità dell'impianto (DM 37/2008)",
+   "IBAN intestato al beneficiario e indirizzo PEC attivo"
+  ],
+  "condominio": [
+   "Codice fiscale del condominio",
+   "Delibera assembleare con dichiarazione di mancata impugnazione (art. 1137 c.c.)"
+  ],
+  "amministratore": "Documento dell'amministratore e dichiarazione dei requisiti (art. 71-bis disp. att. c.c.)",
+  "delegato": "Documento del condomino delegato e delega degli altri condòmini (condomìni fino a 8 partecipanti)",
+  "attestazione": "Attestazione dei requisiti dell'infrastruttura di ricarica, modello Invitalia firmato dall'installatore",
+  "pod": "Fattura o documento del distributore per l'attivazione del nuovo POD",
+  "vvf": "Attestazione del tecnico antincendio sul rispetto delle linee guida VVF, da lasciare all'amministratore",
+  "conservare": [
+   "Originali di fatture, estratti conto e attestazioni: servono per i controlli a campione dopo il pagamento",
+   "Scheda tecnica della wallbox con il riferimento agli elenchi GSE"
+  ],
+  "progetto": "Progetto dell'impianto firmato dal professionista"
+ }
+}

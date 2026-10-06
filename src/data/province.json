@@ -1,1 +1,647 @@
-{"list": [{"sigla": "RM", "nome": "Roma", "regione": "Lazio", "coeff": 1.02}, {"sigla": "MI", "nome": "Milano", "regione": "Lombardia", "coeff": 1.08}, {"sigla": "NA", "nome": "Napoli", "regione": "Campania", "coeff": 0.95}]}
+{
+ "nota": "Coefficiente sulla manodopera rispetto alla media nazionale: stima basata sui prezzari regionali e sul costo orario degli installatori.",
+ "list": [
+  {
+   "sigla": "TO",
+   "nome": "Torino",
+   "regione": "Piemonte",
+   "coeff": 1.07
+  },
+  {
+   "sigla": "VC",
+   "nome": "Vercelli",
+   "regione": "Piemonte",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "NO",
+   "nome": "Novara",
+   "regione": "Piemonte",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "CN",
+   "nome": "Cuneo",
+   "regione": "Piemonte",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "AT",
+   "nome": "Asti",
+   "regione": "Piemonte",
+   "coeff": 1.01
+  },
+  {
+   "sigla": "AL",
+   "nome": "Alessandria",
+   "regione": "Piemonte",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "BI",
+   "nome": "Biella",
+   "regione": "Piemonte",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "VB",
+   "nome": "Verbano-Cusio-Ossola",
+   "regione": "Piemonte",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "AO",
+   "nome": "Aosta",
+   "regione": "Valle d'Aosta",
+   "coeff": 1.07
+  },
+  {
+   "sigla": "VA",
+   "nome": "Varese",
+   "regione": "Lombardia",
+   "coeff": 1.07
+  },
+  {
+   "sigla": "CO",
+   "nome": "Como",
+   "regione": "Lombardia",
+   "coeff": 1.09
+  },
+  {
+   "sigla": "SO",
+   "nome": "Sondrio",
+   "regione": "Lombardia",
+   "coeff": 1.05
+  },
+  {
+   "sigla": "MI",
+   "nome": "Milano",
+   "regione": "Lombardia",
+   "coeff": 1.14
+  },
+  {
+   "sigla": "BG",
+   "nome": "Bergamo",
+   "regione": "Lombardia",
+   "coeff": 1.08
+  },
+  {
+   "sigla": "BS",
+   "nome": "Brescia",
+   "regione": "Lombardia",
+   "coeff": 1.07
+  },
+  {
+   "sigla": "PV",
+   "nome": "Pavia",
+   "regione": "Lombardia",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "CR",
+   "nome": "Cremona",
+   "regione": "Lombardia",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "MN",
+   "nome": "Mantova",
+   "regione": "Lombardia",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "LC",
+   "nome": "Lecco",
+   "regione": "Lombardia",
+   "coeff": 1.07
+  },
+  {
+   "sigla": "LO",
+   "nome": "Lodi",
+   "regione": "Lombardia",
+   "coeff": 1.05
+  },
+  {
+   "sigla": "MB",
+   "nome": "Monza e della Brianza",
+   "regione": "Lombardia",
+   "coeff": 1.11
+  },
+  {
+   "sigla": "BZ",
+   "nome": "Bolzano",
+   "regione": "Trentino-Alto Adige",
+   "coeff": 1.14
+  },
+  {
+   "sigla": "TN",
+   "nome": "Trento",
+   "regione": "Trentino-Alto Adige",
+   "coeff": 1.1
+  },
+  {
+   "sigla": "VR",
+   "nome": "Verona",
+   "regione": "Veneto",
+   "coeff": 1.05
+  },
+  {
+   "sigla": "VI",
+   "nome": "Vicenza",
+   "regione": "Veneto",
+   "coeff": 1.03
+  },
+  {
+   "sigla": "BL",
+   "nome": "Belluno",
+   "regione": "Veneto",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "TV",
+   "nome": "Treviso",
+   "regione": "Veneto",
+   "coeff": 1.03
+  },
+  {
+   "sigla": "VE",
+   "nome": "Venezia",
+   "regione": "Veneto",
+   "coeff": 1.07
+  },
+  {
+   "sigla": "PD",
+   "nome": "Padova",
+   "regione": "Veneto",
+   "coeff": 1.05
+  },
+  {
+   "sigla": "RO",
+   "nome": "Rovigo",
+   "regione": "Veneto",
+   "coeff": 0.99
+  },
+  {
+   "sigla": "UD",
+   "nome": "Udine",
+   "regione": "Friuli-Venezia Giulia",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "GO",
+   "nome": "Gorizia",
+   "regione": "Friuli-Venezia Giulia",
+   "coeff": 1.0
+  },
+  {
+   "sigla": "TS",
+   "nome": "Trieste",
+   "regione": "Friuli-Venezia Giulia",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "PN",
+   "nome": "Pordenone",
+   "regione": "Friuli-Venezia Giulia",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "IM",
+   "nome": "Imperia",
+   "regione": "Liguria",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "SV",
+   "nome": "Savona",
+   "regione": "Liguria",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "GE",
+   "nome": "Genova",
+   "regione": "Liguria",
+   "coeff": 1.07
+  },
+  {
+   "sigla": "SP",
+   "nome": "La Spezia",
+   "regione": "Liguria",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "PC",
+   "nome": "Piacenza",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "PR",
+   "nome": "Parma",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.05
+  },
+  {
+   "sigla": "RE",
+   "nome": "Reggio Emilia",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "MO",
+   "nome": "Modena",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.05
+  },
+  {
+   "sigla": "BO",
+   "nome": "Bologna",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.09
+  },
+  {
+   "sigla": "FE",
+   "nome": "Ferrara",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.01
+  },
+  {
+   "sigla": "RA",
+   "nome": "Ravenna",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "FC",
+   "nome": "Forlì-Cesena",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.03
+  },
+  {
+   "sigla": "RN",
+   "nome": "Rimini",
+   "regione": "Emilia-Romagna",
+   "coeff": 1.05
+  },
+  {
+   "sigla": "MS",
+   "nome": "Massa-Carrara",
+   "regione": "Toscana",
+   "coeff": 0.99
+  },
+  {
+   "sigla": "LU",
+   "nome": "Lucca",
+   "regione": "Toscana",
+   "coeff": 1.03
+  },
+  {
+   "sigla": "PT",
+   "nome": "Pistoia",
+   "regione": "Toscana",
+   "coeff": 1.01
+  },
+  {
+   "sigla": "FI",
+   "nome": "Firenze",
+   "regione": "Toscana",
+   "coeff": 1.09
+  },
+  {
+   "sigla": "LI",
+   "nome": "Livorno",
+   "regione": "Toscana",
+   "coeff": 1.02
+  },
+  {
+   "sigla": "PI",
+   "nome": "Pisa",
+   "regione": "Toscana",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "AR",
+   "nome": "Arezzo",
+   "regione": "Toscana",
+   "coeff": 1.01
+  },
+  {
+   "sigla": "SI",
+   "nome": "Siena",
+   "regione": "Toscana",
+   "coeff": 1.04
+  },
+  {
+   "sigla": "GR",
+   "nome": "Grosseto",
+   "regione": "Toscana",
+   "coeff": 1.01
+  },
+  {
+   "sigla": "PO",
+   "nome": "Prato",
+   "regione": "Toscana",
+   "coeff": 1.03
+  },
+  {
+   "sigla": "PG",
+   "nome": "Perugia",
+   "regione": "Umbria",
+   "coeff": 0.98
+  },
+  {
+   "sigla": "TR",
+   "nome": "Terni",
+   "regione": "Umbria",
+   "coeff": 0.95
+  },
+  {
+   "sigla": "PU",
+   "nome": "Pesaro e Urbino",
+   "regione": "Marche",
+   "coeff": 0.98
+  },
+  {
+   "sigla": "AN",
+   "nome": "Ancona",
+   "regione": "Marche",
+   "coeff": 1.0
+  },
+  {
+   "sigla": "MC",
+   "nome": "Macerata",
+   "regione": "Marche",
+   "coeff": 0.96
+  },
+  {
+   "sigla": "AP",
+   "nome": "Ascoli Piceno",
+   "regione": "Marche",
+   "coeff": 0.96
+  },
+  {
+   "sigla": "FM",
+   "nome": "Fermo",
+   "regione": "Marche",
+   "coeff": 0.95
+  },
+  {
+   "sigla": "VT",
+   "nome": "Viterbo",
+   "regione": "Lazio",
+   "coeff": 0.95
+  },
+  {
+   "sigla": "RI",
+   "nome": "Rieti",
+   "regione": "Lazio",
+   "coeff": 0.94
+  },
+  {
+   "sigla": "RM",
+   "nome": "Roma",
+   "regione": "Lazio",
+   "coeff": 1.06
+  },
+  {
+   "sigla": "LT",
+   "nome": "Latina",
+   "regione": "Lazio",
+   "coeff": 0.97
+  },
+  {
+   "sigla": "FR",
+   "nome": "Frosinone",
+   "regione": "Lazio",
+   "coeff": 0.95
+  },
+  {
+   "sigla": "AQ",
+   "nome": "L'Aquila",
+   "regione": "Abruzzo",
+   "coeff": 0.95
+  },
+  {
+   "sigla": "TE",
+   "nome": "Teramo",
+   "regione": "Abruzzo",
+   "coeff": 0.94
+  },
+  {
+   "sigla": "PE",
+   "nome": "Pescara",
+   "regione": "Abruzzo",
+   "coeff": 0.96
+  },
+  {
+   "sigla": "CH",
+   "nome": "Chieti",
+   "regione": "Abruzzo",
+   "coeff": 0.94
+  },
+  {
+   "sigla": "CB",
+   "nome": "Campobasso",
+   "regione": "Molise",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "IS",
+   "nome": "Isernia",
+   "regione": "Molise",
+   "coeff": 0.9
+  },
+  {
+   "sigla": "CE",
+   "nome": "Caserta",
+   "regione": "Campania",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "BN",
+   "nome": "Benevento",
+   "regione": "Campania",
+   "coeff": 0.9
+  },
+  {
+   "sigla": "NA",
+   "nome": "Napoli",
+   "regione": "Campania",
+   "coeff": 0.97
+  },
+  {
+   "sigla": "AV",
+   "nome": "Avellino",
+   "regione": "Campania",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "SA",
+   "nome": "Salerno",
+   "regione": "Campania",
+   "coeff": 0.93
+  },
+  {
+   "sigla": "FG",
+   "nome": "Foggia",
+   "regione": "Puglia",
+   "coeff": 0.9
+  },
+  {
+   "sigla": "BA",
+   "nome": "Bari",
+   "regione": "Puglia",
+   "coeff": 0.96
+  },
+  {
+   "sigla": "TA",
+   "nome": "Taranto",
+   "regione": "Puglia",
+   "coeff": 0.92
+  },
+  {
+   "sigla": "BR",
+   "nome": "Brindisi",
+   "regione": "Puglia",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "LE",
+   "nome": "Lecce",
+   "regione": "Puglia",
+   "coeff": 0.92
+  },
+  {
+   "sigla": "BT",
+   "nome": "Barletta-Andria-Trani",
+   "regione": "Puglia",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "PZ",
+   "nome": "Potenza",
+   "regione": "Basilicata",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "MT",
+   "nome": "Matera",
+   "regione": "Basilicata",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "CS",
+   "nome": "Cosenza",
+   "regione": "Calabria",
+   "coeff": 0.89
+  },
+  {
+   "sigla": "CZ",
+   "nome": "Catanzaro",
+   "regione": "Calabria",
+   "coeff": 0.9
+  },
+  {
+   "sigla": "RC",
+   "nome": "Reggio Calabria",
+   "regione": "Calabria",
+   "coeff": 0.9
+  },
+  {
+   "sigla": "KR",
+   "nome": "Crotone",
+   "regione": "Calabria",
+   "coeff": 0.87
+  },
+  {
+   "sigla": "VV",
+   "nome": "Vibo Valentia",
+   "regione": "Calabria",
+   "coeff": 0.87
+  },
+  {
+   "sigla": "TP",
+   "nome": "Trapani",
+   "regione": "Sicilia",
+   "coeff": 0.9
+  },
+  {
+   "sigla": "PA",
+   "nome": "Palermo",
+   "regione": "Sicilia",
+   "coeff": 0.94
+  },
+  {
+   "sigla": "ME",
+   "nome": "Messina",
+   "regione": "Sicilia",
+   "coeff": 0.92
+  },
+  {
+   "sigla": "AG",
+   "nome": "Agrigento",
+   "regione": "Sicilia",
+   "coeff": 0.89
+  },
+  {
+   "sigla": "CL",
+   "nome": "Caltanissetta",
+   "regione": "Sicilia",
+   "coeff": 0.89
+  },
+  {
+   "sigla": "EN",
+   "nome": "Enna",
+   "regione": "Sicilia",
+   "coeff": 0.88
+  },
+  {
+   "sigla": "CT",
+   "nome": "Catania",
+   "regione": "Sicilia",
+   "coeff": 0.94
+  },
+  {
+   "sigla": "RG",
+   "nome": "Ragusa",
+   "regione": "Sicilia",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "SR",
+   "nome": "Siracusa",
+   "regione": "Sicilia",
+   "coeff": 0.91
+  },
+  {
+   "sigla": "SS",
+   "nome": "Sassari",
+   "regione": "Sardegna",
+   "coeff": 0.96
+  },
+  {
+   "sigla": "NU",
+   "nome": "Nuoro",
+   "regione": "Sardegna",
+   "coeff": 0.93
+  },
+  {
+   "sigla": "CA",
+   "nome": "Cagliari",
+   "regione": "Sardegna",
+   "coeff": 0.98
+  },
+  {
+   "sigla": "OR",
+   "nome": "Oristano",
+   "regione": "Sardegna",
+   "coeff": 0.93
+  },
+  {
+   "sigla": "SU",
+   "nome": "Sud Sardegna",
+   "regione": "Sardegna",
+   "coeff": 0.92
+  }
+ ]
+}
