@@ -1,4 +1,4 @@
-# Bonus Colonnine 2026 · BioPane
+# Bonus Colonnine 2026 · IlBioPane
 
 Dashboard non ufficiale sul **bonus colonnine domestiche** (contributo MIMIT gestito da Invitalia): fondi residui in tempo reale, previsione di esaurimento, configuratore dei casi d'installazione con preventivo per provincia, guida alla domanda e riferimenti normativi. Tutto in un'unica pagina HTML.
 
